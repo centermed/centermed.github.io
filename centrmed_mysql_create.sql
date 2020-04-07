@@ -4,8 +4,8 @@ CREATE TABLE `Запись` (
 	`Имя` TEXT(20) NOT NULL,
 	`Отчество` TEXT(20) NOT NULL,
 	`Телефон` bigint(11) NOT NULL,
-	`Направление` longtext(150) NOT NULL DEFAULT 'Терапия',
-	`Услуга` longtext(150) NOT NULL DEFAULT 'Первичный прием терапевта ',
+	`Направление` longtext(150) NOT NULL,
+	`Услуга` longtext(150) NOT NULL,
 	`Врач` longtext(150) NOT NULL,
 	`Дата` DATE NOT NULL,
 	`Время` TIME NOT NULL,
@@ -63,6 +63,7 @@ CREATE TABLE `Клиники` (
 );
 
 CREATE TABLE `Свободное время для записи.` (
+	`id` bigint NOT NULL AUTO_INCREMENT,
 	`id Врача` bigint NOT NULL,
 	`Дата` DATE NOT NULL,
 	`Время1` TIME NOT NULL,
@@ -72,7 +73,7 @@ CREATE TABLE `Свободное время для записи.` (
 	`Время5` TIME NOT NULL AUTO_INCREMENT,
 	`Время6` TIME NOT NULL AUTO_INCREMENT,
 	`Время32` TIME NOT NULL AUTO_INCREMENT,
-	PRIMARY KEY (`id Врача`)
+	PRIMARY KEY (`id`)
 );
 
 ALTER TABLE `Запись` ADD CONSTRAINT `Запись_fk0` FOREIGN KEY (`Направление`) REFERENCES `Направления/услуги`(`Направление`);
