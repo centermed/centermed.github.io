@@ -1,15 +1,15 @@
 CREATE TABLE `Запись` (
 	`id` int NOT NULL AUTO_INCREMENT,
-	`Фамилия` TEXT(20) NOT NULL,
-	`Имя` TEXT(20) NOT NULL,
-	`Отчество` TEXT(20) NOT NULL,
-	`Телефон` bigint(11) NOT NULL,
-	`Направление` longtext(150) NOT NULL,
-	`Услуга` longtext(150) NOT NULL,
-	`Врач` longtext(150) NOT NULL,
-	`Дата` DATE NOT NULL,
-	`Время` TIME NOT NULL,
-	`Адрес клиники` longtext NOT NULL,
+	`Фамилия` TEXT(20),
+	`Имя` TEXT(20),
+	`Отчество` TEXT(20),
+	`Телефон` bigint(11),
+	`Направление` longtext(150),
+	`Услуга` longtext(150),
+	`Врач` longtext(150),
+	`Дата` DATE,
+	`Время` TIME,
+	`Адрес клиники` longtext,
 	PRIMARY KEY (`id`)
 );
 
