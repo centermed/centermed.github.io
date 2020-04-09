@@ -61,6 +61,10 @@ a:hover{
   font-size: 0.8em;
 }
 
+.hier-record img{
+  max-width: 180%;
+}
+
 .slider{
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -119,26 +123,122 @@ a:hover{
 }
 
 .search{
+  padding-top: 3px;
   margin-top:10px;
   height: 40px; /* Размеры */
-  outline: 2px solid #707070; /* Чёрная рамка */
-  border: 1px solid #fff; /* Белая рамка */
+  outline: 2px solid #707070; 
+  border: 1px solid #fff; 
+  color: #707070;;
 }
 
 .button-search{
-  margin-left: 20px;
+  min-width: 10%;
+  margin-left: 15px;
   margin-top:10px;
   padding-top:2px;
   height: 40px;
   color: white;
-  background-color:#0FADEC;
+  background-color:#2D8FD8;
   border-radius: 25px;
+  border:0px;
 }
 
 .doctor{
   margin-top:20px;
-  height: 300px;
+  min-height: 300px;
   background-color:#DBE9EB;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+}
+
+.photo img{
+  border-radius: 50%;
+  width: 110%;
+  margin-top: 50px;
+  float: left;
+}
+
+.text-doctor{
+  font-size: 0.8em;
+  margin-top: 2%;
+
+}
+
+.text-doctor h2{
+  font-size: 1.25em;
+}
+
+.text-doctor img{
+  margin-bottom: 5px;
+  width: 5%;
+}
+
+.time-ago{
+  margin-top: 20%;
+  font-size: 0.85em;
+
+}
+
+.record-panel{
+  font-size: 0.8em;
+  margin-top: 2%;
+}
+
+.record-panel p{
+  margin-bottom: 7px;
+  font-size: 0.98em;
+  float:left;
+  margin-left:5px;
+  
+}
+
+.button-panel button{
+  height: 33px;
+  min-width: 100px;
+  color: #707070;
+  background-color: white;
+  border:0px;
+  margin-right: 10px;/*2%*/
+  float: center;
+
+}
+
+.button-panel .left{
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+}
+
+.button-panel .right{
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+}
+
+.button-panel .center{
+  border-radius: 20px;
+}
+
+.button-panel .activ{
+  color: white;
+  background-color: #2D8FD8;
+}
+
+.time-panel button{
+  height: 30px;
+  min-width: 18%;
+  color: #707070;
+  background-color: white;
+  border: 0px;
+  margin-right: 6%;/*6%*/
+  margin-top: 4%;
+  float: right;
+}
+
+.time-panel .activ{
+  color: white;
+  background-color: #2D8FD8;
+}
+
+.record-panel .number{
+  margin-top: 7%;
+  font-size: 0.98em;
 }
