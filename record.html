@@ -93,26 +93,63 @@
         <div class = "col-8 offset-2" align="center">
           <h2><b>Запишитесь на прием к врачу онлайн</b></h2>
         </div>
-        <div class = "search col-5 offset-3">
-          Врач,болезнь,услуга
-        </div>
-        <div class = "button-search col-1" align=center>
+        <input type="search" value = "Врач,болезнь,услуга" class = "search col-5 offset-3">
+        </input>
+        <button class = "button-search col-1" align=center>
           Найти
-        </div>
+        </button>
       </div>
     </div>
 
     <div class = "container">
       <div class = "row">
         <div class = "doctor col-10 offset-1" align="center">
-            
+          <div class = "container-fluid">
+            <div class = "row">
+              <div class = "photo col-2">
+                <img src = "media/photo.png">
+              </div>
+              <div class = "text-doctor col-5" align = left>
+                <p>терапевт</p>
+                <h2><b>Еременко Валерий Сергеевич</b></h2>
+                <p>Стаж 21 год</p>
+                <p>к.м.н</p>
+                <h2><b>2100<img src = "media/rubl.png"></b></h2>
+                <p class = 'time-ago'><img src = "media/gall.png">Последняя запись к этому врачу была 2 часа назад</p>
+              </div>
+              <div class = "record-panel col-5">
+                <p>Выберите время приема для записи онлайн</p>
+                <div class = 'button-panel'>
+                  <button class = 'left'>Среда,11</button>
+                  <button class = 'activ center'>Четверг,12</button>
+                  <button class = 'right'>Пятница,13</button>
+                </div>
+                <div class = 'time-panel' onclick=>
+                  <button>13:00</button>
+                  <button class = 'activ'>13:30</button>
+                  <button>13:50</button>
+                  <button>14:10</button>
+                  <button>14:30</button>
+                  <button>14:50</button>
+                  <button>15:10</button>
+                  <button>15:30</button>
+                  <button>15:50</button>
+                  <button>16:10</button>
+                  <button>16:30</button>
+                  <button>16:50</button>
+                </div>
+                <p class = 'number'>Телефон для записи: 8(499)519-37-05</p>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class = "container">
       <div class = "row">
-        <div class = "sosials col-3" align = center>
+        <div class = "sosials col-3 offset-1" align = center>
           <a href="#">
             <img src = "media/vk.png" width="20%">
           </a>
