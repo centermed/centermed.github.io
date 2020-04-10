@@ -125,23 +125,86 @@
                   <button class = 'right'>Пятница,13</button>
                 </div>
                 <div class = 'time-panel' onclick=>
-                  <button>13:00</button>
-                  <button class = 'activ'>13:30</button>
-                  <button>13:50</button>
-                  <button>14:10</button>
-                  <button>14:30</button>
-                  <button>14:50</button>
-                  <button>15:10</button>
-                  <button>15:30</button>
-                  <button>15:50</button>
-                  <button>16:10</button>
-                  <button>16:30</button>
-                  <button>16:50</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">13:00</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" class = 'activ'>13:30</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">13:50</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">14:10</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">14:30</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">14:50</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">15:10</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">15:30</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">15:50</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">16:10</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">16:30</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter">16:50</button>
                 </div>
                 <p class = 'number'>Телефон для записи: 8(499)519-37-05</p>
               </div>
 
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Запустить модальное окно
+    </button>-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Онлайн-запись</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="familyname">Фамилия</label>
+                <input type="text" class="form-control" id="familyname" placeholder="Иванов">
+              </div>
+              <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" class="form-control" id="name" placeholder="Иван">
+              </div>
+              <div class="form-group">
+                <label for="secondname">Отчество</label>
+                <input type="text" class="form-control" id="secondname" placeholder="Иванович">
+              </div>
+              <div class="form-group">
+                <label for="number">Номер телефона</label>
+                <input type="phone" class="form-control" id="number" placeholder="+7(922)1212120">
+              </div>
+              <div class="form-group">
+                <label for="information">Информация о приёме</label>
+                <input type="text" class="form-control" id="direction" placeholder="Офтальмология" readonly>
+                <input type="text" class="form-control" id="doctor" placeholder="Геннадий Иванович Доктор" readonly>
+              </div>
+              <div class="form-group">
+                <label for="datetime">Дата и время приема</label>
+                <div class= "row">
+                  <div class="col">
+                    <input type="text" class="form-control" id="date" placeholder="13.05.2020" readonly>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" id="time" placeholder="16:30" readonly>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="price">Цена</label>
+                <input type="text" class="form-control" id="price" placeholder="2100 рублей" readonly>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Отправить</button>
           </div>
         </div>
       </div>
