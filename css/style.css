@@ -217,6 +217,16 @@ a:hover{
   border-radius: 20px;
 }
 
+.button-panel button:hover{
+  color: white;
+  background-color: #2D8FD8;
+}
+
+.button-panel button:focus{
+  color: white;
+  background-color: #2D8FD8;
+}
+
 .button-panel .activ{
   color: white;
   background-color: #2D8FD8;
@@ -228,13 +238,24 @@ a:hover{
 
 .time-panel button{
   height: 30px;
-  min-width: 18%;
+  min-width: 19%;
   color: #707070;
   background-color: white;
   border: 0px;
-  margin-right: 6%;/*6%*/
-  margin-top: 4%;
+  margin-right: 1em;/*6%*/
+  margin-top: 0.8em;
   float: left;
+  border-radius: 3px;
+}
+
+.time-panel button:hover{
+  color: white;
+  background-color: #2D8FD8;
+}
+
+.time-panel button:focus{
+  color: white;
+  background-color: #2D8FD8;
 }
 
 .time-panel .activ{
@@ -251,5 +272,5 @@ a:hover{
   margin: 5px;
 }
 .form-group label{
-  font-size: 1em;
+  font-size: 0.98em;
 }
