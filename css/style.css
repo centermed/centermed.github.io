@@ -179,6 +179,16 @@ a:hover{
 
 }
 
+.record{
+  border-width: 1px;
+  color: #707070;
+  border-color: #707070;
+  background: white;
+  width: 100%;
+  font-size: 0.9em;
+  height: 60px;
+}
+
 .record-panel{
   font-size: 0.8em;
   margin-top: 2%;
