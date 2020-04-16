@@ -2,6 +2,8 @@ body{
 	color: #707070;
 	font-family: 'Segoe UI';
 	font-size: 1.3em;
+  /*background: #FFFAFA; F8F8FF*/
+  background: #F8F8FF;
 }
 
 ul {
@@ -13,12 +15,8 @@ ul {
   text-decoration: none;
   color: #2D8FD8;
 }
-.logo a:visited{
-  color: #2D8FD8;
-}
-.logo a:active{
-  color: #2D8FD8;
-}
+.logo a:visited,
+.logo a:active,
 .logo a:hover{
   color: #2D8FD8;
 }
@@ -30,12 +28,8 @@ a img{
 a{
   color:#707070;
 }
-a:visited{
-	color: #707070;
-}
-a:active{
-	color: #707070;
-}
+a:visited,
+a:active,
 a:hover{
 	color: #707070;
 }
@@ -54,6 +48,8 @@ a:hover{
 .hier{
 	margin-top: 10px;
 	border: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px #ccc solid;
 }
 
 .hier-record{
@@ -129,6 +125,7 @@ a:hover{
   outline: 2px solid #707070; 
   border: 1px solid #fff; 
   color: #707070;;
+  background: #F8F8FF;
 }
 
 .button-search{
@@ -137,7 +134,7 @@ a:hover{
   margin-top:10px;
   padding-top:2px;
   height: 40px;
-  color: white;
+  color: #F8F8FF;
   background-color:#2D8FD8;
   border-radius: 25px;
   border:0px;
@@ -150,6 +147,7 @@ a:hover{
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
 }
+
 
 .photo img{
   border-radius: 50%;
@@ -183,10 +181,17 @@ a:hover{
   border-width: 1px;
   color: #707070;
   border-color: #707070;
-  background: white;
+  background: #F8F8FF;
   width: 100%;
   font-size: 0.9em;
   height: 60px;
+}
+
+.record:focus,
+.record:hover{
+  background: linear-gradient(135deg,#79CBCA,#E684AE);
+  border-width: 0px;
+  color: #F8F8FF;
 }
 
 .record-panel{
@@ -206,7 +211,7 @@ a:hover{
   height: 33px;
   min-width: 100px;
   color: #707070;
-  background-color: white;
+  background-color: #F8F8FF;
   border:0px;
   margin-right: 10px;/*2%*/
   float: center;
@@ -227,18 +232,14 @@ a:hover{
   border-radius: 20px;
 }
 
-.button-panel button:hover{
-  color: white;
-  background-color: #2D8FD8;
-}
-
+.button-panel button:hover,
 .button-panel button:focus{
-  color: white;
+  color: #F8F8FF;
   background-color: #2D8FD8;
 }
 
 .button-panel .activ{
-  color: white;
+  color: #F8F8FF;
   background-color: #2D8FD8;
 }
 
@@ -250,7 +251,7 @@ a:hover{
   height: 30px;
   min-width: 19%;
   color: #707070;
-  background-color: white;
+  background-color: #F8F8FF;
   border: 0px;
   margin-right: 1em;/*6%*/
   margin-top: 0.8em;
@@ -258,18 +259,14 @@ a:hover{
   border-radius: 3px;
 }
 
-.time-panel button:hover{
-  color: white;
-  background-color: #2D8FD8;
-}
-
+.time-panel button:hover,
 .time-panel button:focus{
-  color: white;
+  color: #F8F8FF;
   background-color: #2D8FD8;
 }
 
 .time-panel .activ{
-  color: white;
+  color: #F8F8FF;
   background-color: #2D8FD8;
 }
 
@@ -284,3 +281,4 @@ a:hover{
 .form-group label{
   font-size: 0.98em;
 }
+
