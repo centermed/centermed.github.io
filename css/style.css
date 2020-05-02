@@ -46,10 +46,19 @@ a:hover{
 }
 
 .hier{
-	margin-top: 10px;
+	padding-top: 10px;
 	border: 10px;
   padding-bottom: 10px;
   border-bottom: 1px #ccc solid;
+  box-shadow: 0 2px 3px rgba(0,0,0,.1);
+  position: fixed;
+  top: 0;
+  background: #F8F8FF;
+  z-index: 50;
+}
+
+.after-menu{
+  padding-top: 120px;
 }
 
 .hier-record{
@@ -114,8 +123,18 @@ a:hover{
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-.sosials {
-	margin-top: 12%;
+.sosials img{
+  float:left;
+  margin-top: 18px;
+}
+.sosials a{
+  margin-top: 10px;
+}
+.icon{
+  margin-top: 45px;
+}
+.icon img{
+  margin-top:-1px;
 }
 
 .search{
