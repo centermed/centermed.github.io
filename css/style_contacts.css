@@ -1,0 +1,6 @@
+.map{
+	-webkit-box-shadow: inset 0px -56px 84px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px -56px 84px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 0px -56px 84px 0px rgba(0,0,0,0.75);
+	z-index: 5;
+}
