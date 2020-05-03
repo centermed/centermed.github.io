@@ -4,6 +4,9 @@ body{
 	font-size: 1.3em;
   /*background: #FFFAFA; F8F8FF*/
   background: #F8F8FF;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 ul {
@@ -71,8 +74,20 @@ a:hover{
 }
 
 .slider{
-	margin-top: 10px;
+	margin-top: -8px;
 	margin-bottom: 10px;
+  justify-content: center;
+}
+
+.slider {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.slider a{
+  z-index: 5
 }
 
 .slider__control {
@@ -127,11 +142,15 @@ a:hover{
   float:left;
   margin-top: 18px;
 }
+.logobot{
+  padding: 15px;
+}
+
 .sosials a{
   margin-top: 10px;
 }
 .icon{
-  margin-top: 45px;
+  margin-top: 35px;
 }
 .icon img{
   margin-top:-1px;
