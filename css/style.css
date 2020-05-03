@@ -1,7 +1,7 @@
 body{
-	color: #707070;
-	font-family: 'Segoe UI';
-	font-size: 1.3em;
+  color: #707070;
+  font-family: 'Segoe UI';
+  font-size: 1.3em;
   /*background: #FFFAFA; F8F8FF*/
   background: #F8F8FF;
   width: 100%;
@@ -39,7 +39,7 @@ a:hover{
 
 .logo{
 	font-size: 35px;
-	font-family: 'Segoe UI'
+	font-family: 'Segoe UI';
 	margin-left: 30px;
 	color: #2D8FD8;
 }
@@ -87,7 +87,7 @@ a:hover{
 }
 
 .slider a{
-  z-index: 5
+  z-index: 5;
 }
 
 .slider__control {
