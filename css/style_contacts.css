@@ -1,6 +1,17 @@
 .map{
-	-webkit-box-shadow: inset 0px -56px 84px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: inset 0px -56px 84px 0px rgba(0,0,0,0.75);
-	box-shadow: inset 0px -56px 84px 0px rgba(0,0,0,0.75);
-	z-index: 5;
+	position: relative;
+}
+
+.map h1{
+	position: absolute;;
+	bottom: -10px;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,0) 100%);
+	pointer-events: none;
+	z-index: 10;
+	color: white;
+}
+.map h1 b{
+	margin-left: 3.6em;
 }
