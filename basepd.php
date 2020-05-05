@@ -12,11 +12,11 @@ $link = mysqli_connect($hostname_basepd,$username_basepd,$password_basepd);
 
 if($link)
 			{
-				echo "Соединение с сервером установлено", "<br>"; 
+				echo "Р‘Р°Р·Р° РїРѕРґРєР»СЋС‡РµРЅР°", "<br>"; 
 			}
 			else
 			{
-				echo "Нет соединения с сервером";
+				echo "Р‘Р°Р·Р° РЅРµ РїРѕРґРєР»СЋС‡РµРЅР°";
 			}
 
 

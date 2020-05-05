@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Запись</title>
+</head>
+
+<body>
+			<form name = "Zapis" action = "GetDataFromFromRecord.php" method = "POST">
+              <div class="form-group">
+                <label for="familyname">Фамилия</label>
+                <input type="text" class="form-control" name="familyname" placeholder="Иванов">
+              </div>
+              <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" class="form-control" name="name" placeholder="Иван">
+              </div>
+              <div class="form-group">
+                <label for="secondname">Отчество</label>
+                <input type="text" class="form-control" name="secondname" placeholder="Иванович">
+              </div>
+              <div class="form-group">
+                <label for="number">Номер телефона</label>
+                <input type="text" class="form-control" name="number" placeholder="+7(922)-984-33-17">
+              </div>
+              <div class="form-group">
+                <label for="information">Полноая информация по записи</label>
+                <div class= "row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="direction" placeholder="Офтальмология">
+                  </div>
+                  <div class="col">
+                      <select name = "Usluga">
+				
+ 			 <option value = "1">Услуга 1</option>
+  			 <option value= "2">Услуга 2</option>
+			 <option value="3">Услуга 3</option>
+  			 <option value="4">Услуга 4</option>			
+			</select>
+                  </div>
+                </div>
+                  <select name = "Vrach_nom" >
+				
+ 			 <option value ="1">Врач 1</option>
+  			 <option value ="2">Врач 2</option>
+			 <option value ="3">Врач 3</option>
+  			 <option value ="4">Врач 4</option>			
+			</select>
+              </div>
+              <div class="form-group">
+                <label for="datetime">Время приема</label>
+                <div class= "row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="date" placeholder="13.05.2020">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="time" placeholder="16:30-17:30">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="price">Цена</label>
+                <input type="text" class="form-control" name="price" placeholder="2100 &#8381" readonly>
+              </div>
+				<input name = "submit" type="submit" value = "Отправить"class="btn btn-primary">
+            </form>
+	<div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+		
+            
+		
+          </div>
+	
+	
+</body>
+</html>

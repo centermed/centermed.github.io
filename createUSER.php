@@ -1,8 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="windows-1251">
-<title>Документ без названия</title>
+<meta charset="utf-8">
 </head>
 
 <body>
@@ -14,37 +13,35 @@
 	
 	if($link)
 	{
-		echo "Пользователь root создался <br>";
+		echo "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ root СЃРѕР·РґР°РЅ <br>";
 
 	}
 	else
 	{ 
-	    echo "Пользователь root не создался <br>";	
+	    echo "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ root РЅРµ СЃРѕР·РґР°РЅ <br>";	
 	}
 	
 	$query= "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' IDENTIFIED BY '123' WITH GRANT OPTION";
 	
 	if(mysqli_query($link,$query))
 	{
-		echo "Пользователь создан <br>";
+		echo "РџРѕР»СЊР·РѕРјР°С‚РµР»СЊ $user СЃРѕР·РґР°РЅ <br>";
 	}
 	else
 	{
-		echo "Пользователь не создан <br>";
+		echo "РџРѕР»СЊР·РѕРјР°С‚РµР»СЊ РЅРµ $user СЃРѕР·РґР°РЅ <br>";
 	}
-	
-	
 	
 	$linknewuser = mysqli_connect($host_name,$user,$password);
 	
 	if($linknewuser)
 	{
-		echo "Пользователь $user выбран <br>";
+		echo "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ $user РїРѕРґРєР»СЋС‡РµРЅ <br>";
 
 	}
 	else
 	{ 
-	    echo "Пользователь $user не выбран <br>";	
+	    echo "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ $user РЅРµ РїРѕРґРєР»СЋС‡РµРЅ <br>";	
 	}
 	
 	?>
