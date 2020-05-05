@@ -1,12 +1,4 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="windows-1251">
-<title>Документ без названия</title>
-</head>
-
-<body>
-	<?PHP
+<?PHP
 	
 	$host_name="localhost";
 	$user = "admin";
@@ -15,22 +7,20 @@
 	$link = mysqli_connect($host_name,$user,$password);
 	if($link)
 	{
-		echo "Пользователь $user подключен <br>";
+		echo "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ $user СЃРѕР·РґР°РЅ <br>";
 	}
 	else
 	{
-		echo "Пользователь $user не  подключен <br>";
+		echo "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ $user РЅРµ СЃРѕР·РґР°РЅ <br>";
 	}
 	$query = "CREATE DATABASE $dbname";
 	if(mysqli_query($link,$query))
 	{
-		echo "База данных $dbname успешно создана <br>";
+		echo "Р‘Р°Р·Р° $dbname СЃРѕР·РґР°РЅР° <br>";
 	}
 	else
 	{
-		echo "База данных $dbname не создана <br>";
+		echo "Р‘Р°Р·Р° $dbname РЅРµ СЃРѕР·РґР°РЅР° РёР»Рё Р±С‹Р»Р° СѓР¶Рµ СЃРѕР·РґР°РЅР° СЂР°РЅРµРµ <br>";
 	}
 	
 	?>
-</body>
-</html>

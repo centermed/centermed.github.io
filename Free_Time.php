@@ -5,23 +5,23 @@ $password = "123";
 $link = mysqli_connect($hostname,$login, $password);
 if($link)
 {
-	echo "Пользователь $login вошел";?> <br><?PHP
+	echo "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ $login РїРѕРґРєР»СЋС‡РµРЅ";?> <br><?PHP
 }
 else
 	
 {
-	echo "Пользователь $login не вошел! Возможно неверный хост или пароль";?> <br><?PHP
+	echo "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ $login РЅРµ РїРѕРґРєР»СЋС‡РµРЅ!";?> <br><?PHP
 }
 
 $dbname = "basepd";
 if(mysqli_select_db($link,$dbname))
 {
-	echo "База данных $dbname выбрана";?> <br><?PHP
+	echo "Р‘Р°Р·Р° $dbname РїРѕРґРєР»СЋС‡РµРЅР°";?> <br><?PHP
 }
 	else
 		
 {
-	echo "База данных $dbname не выбрана или была уже выбрана ранее";?> <br><?PHP
+	echo "Р‘Р°Р·Р° $dbname РЅРµ РїРѕРґРєР»СЋС‡РµРЅР° РёР»Рё СѓР¶Рµ Р±С‹Р»Р° РїРѕРґРєР»СЋС‡РµРЅР°";?> <br><?PHP
 }
 
 
