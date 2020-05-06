@@ -163,6 +163,14 @@ a:hover{
   .sosials{
     display: none;
   }
+  .inform h2{
+    font-size: 1em;
+  }
+  .slider__control {
+    width: 20px;
+    height: 30px;
+}
+
 }
 .logobot{
   padding: 15px;
