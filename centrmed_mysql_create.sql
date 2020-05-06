@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `zapis` (
   `Imya` tinytext NOT NULL,
   `Otchestvo` tinytext NOT NULL,
   `Telefon` tinytext NOT NULL,
-  `Napravlenie` tinytext NOT NULL,
+  `Napravlenie` longtext NOT NULL,
   `Usluga` int(10) NOT NULL,
   `Vrach` int(10) NOT NULL,
   `Data` tinytext NOT NULL,
@@ -110,4 +110,3 @@ ALTER TABLE `vrachi` ADD CONSTRAINT `vrachi_fk2` FOREIGN KEY (`Clinica`) REFEREN
 ALTER TABLE `svobodnoevremya` ADD CONSTRAINT `svobodnoevremya_fk0` FOREIGN KEY (`idvrach`) REFERENCES `vrachi`(`id`);
 
 ALTER TABLE `svobodnoevremya` ADD CONSTRAINT `svobodnoevremya_fk1` FOREIGN KEY (`Data`) REFERENCES `vrachi`(`RabDni`);
-
