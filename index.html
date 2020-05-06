@@ -15,7 +15,7 @@
     <title>Главная</title>
   </head>
   <body>
-
+     <script src="script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -60,13 +60,13 @@
     <div class = "after-menu slider container-fluid">
       <div class = "row">
         <div>
-          <a class="slider__control slider__control_prev" href="#" role="button"></a>
+          <a class="slider__control slider__control_prev" href="#" role="button" onclick="setimg(0)"></a>
         </div>
         <div class = "col-12">
-          <img src = "media/slide2.png" width='100%'>
+          <img id="slide_id" src = "media/slide1.png" width='100%'>
         </div>
         <div>
-          <a class="slider__control slider__control_next slider__control_show" href="#" role="button"></a>
+          <a class="slider__control slider__control_next slider__control_show" href="#" role="button" onclick="setimg(1)"></a>
         </div>
       </div>
     </div>
@@ -113,7 +113,7 @@
             </form>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-              <button type="button" class="btn btn-primary" data-toggle="modal">Отправить</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@
     <footer class = "container">
       <div class = "row">
         <div class = "sosials col-3 offset-1" align = left>
-          <img src = 'media/cmg.svg' width="70%" class = 'logobot'>
+          <img onclick="img_click()" onmouseenter="img_enter()" onmouseleave="img_leave()" id="logomed" src = 'media/cmg.svg' width="70%" class = 'logobot'>
           <div class = "icon">
             <a href="#">
               <img src = "media/vk.png" width="20%">
@@ -164,6 +164,5 @@
         </div>
       </div>
     </footer>
-
-  </body>
+ </body>
 </html>

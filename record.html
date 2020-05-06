@@ -15,7 +15,7 @@
     <title>Онлайн-запись</title>
   </head>
   <body>
-
+     <script src="script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -79,7 +79,7 @@
             </form>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-              <button type="button" class="btn btn-primary">Отправить</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
             </div>
           </div>
         </div>
@@ -143,8 +143,8 @@
                 <img src = "media/photo.png">
               </div>
               <div class = "text-doctor col-5" align = left>
-                <p>терапевт</p>
-                <h2><b>Еременко Валерий Сергеевич</b></h2>
+                <p id="speciality" value="Терапевт">терапевт</p>
+                <h2><b id="nameofdoctor">Еременко Валерий Сергеевич</b></h2>
                 <p>Стаж 21 год</p>
                 <p>к.м.н</p>
                 <h2><b>2100 &#8381</b></h2>
@@ -153,23 +153,23 @@
               <div class = "record-panel col-5">
                 <p>Выберите время приема для записи онлайн</p>
                 <div class = 'button-panel'>
-                  <button class = 'left'>Среда,11</button>
-                  <button class = 'activ center'>Четверг,12</button>
-                  <button class = 'right'>Пятница,13</button>
+                  <button id='left' class = 'left' onmouseover="colorchange('left')" onclick="setDate('left')">Среда,11</button>
+                  <button id='center' class = 'center' onmouseover="colorchange('center')" onclick="setDate('center')">Четверг,12</button>
+                  <button id='right' class = 'right' onmouseover="colorchange('right')" onclick="setDate('right')">Пятница,13</button>
                 </div>
                 <div class = 'time-panel' onclick=>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">13:00</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" class = 'activ'>13:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">13:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">14:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">14:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">14:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">15:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">15:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">15:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">16:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">16:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter">16:50</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:00')">13:00</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:30')">13:30</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:50')">13:50</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:10')">14:10</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:30')">14:30</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:50')">14:50</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:10')">15:10</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:30')">15:30</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:50')">15:50</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:10')">16:10</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:30')">16:30</button>
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:50')">16:50</button>
                 </div>
                 <p class = 'number'>Телефон для записи: 8(499)519-37-05</p>
               </div>
@@ -217,7 +217,7 @@
                 <label for="information">Информация о приёме</label>
                 <div class= "row">
                   <div class="col">
-                    <input type="text" class="form-control" id="direction" placeholder="Офтальмология" readonly>
+                    <input type="text" class="form-control" id="direction" placeholder="Офтальмолог" readonly>
                   </div>
                   <div class="col">
                     <input type="text" class="form-control" id="service" placeholder="Первичный приём" readonly>
@@ -229,7 +229,7 @@
                 <label for="datetime">Дата и время приема</label>
                 <div class= "row">
                   <div class="col">
-                    <input type="text" class="form-control" id="date" placeholder="13.05.2020" readonly>
+                    <input type="text" class="form-control" id="date" placeholder="12.05.2020" readonly>
                   </div>
                   <div class="col">
                     <input type="text" class="form-control" id="time" placeholder="16:30" readonly>
@@ -244,7 +244,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-            <button type="button" class="btn btn-primary">Отправить</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
           </div>
         </div>
       </div>
@@ -253,7 +253,7 @@
     <footer class = "container">
       <div class = "row">
         <div class = "sosials col-3 offset-1" align = left>
-          <img src = 'media/cmg.svg' width="70%" class = 'logobot'>
+         <img onclick="img_click()" onmouseenter="img_enter()" onmouseleave="img_leave()" id="logomed" src = 'media/cmg.svg' width="70%" class = 'logobot'>
           <div class = "icon">
             <a href="#">
               <img src = "media/vk.png" width="20%">
@@ -293,6 +293,5 @@
         </div>
       </div>
     </footer>
-
   </body>
 </html>

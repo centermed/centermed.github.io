@@ -15,7 +15,7 @@
     <title>О нас</title>
   </head>
   <body>
-
+    <script src="script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -79,7 +79,7 @@
             </form>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-              <button type="button" class="btn btn-primary">Отправить</button>
+             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@
     <footer class = "container">
       <div class = "row">
         <div class = "sosials col-3 offset-1" align = left>
-          <img src = 'media/cmg.svg' width="70%" class = 'logobot'>
+          <img onclick="img_click()" onmouseenter="img_enter()" onmouseleave="img_leave()" id="logomed" src = 'media/cmg.svg' width="70%" class = 'logobot'>
           <div class = "icon">
             <a href="#">
               <img src = "media/vk.png" width="20%">
