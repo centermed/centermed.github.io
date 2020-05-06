@@ -22,8 +22,8 @@ CREATE TABLE `call` (
 
 CREATE TABLE `services` (
 	`id` int NOT NULL AUTO_INCREMENT,
-	`specialization` longtext(150) NOT NULL,
-	`servuce` longtext(150),
+	`specialization` longtext NOT NULL,
+	`service` longtext,
 	`price` int(10) NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -46,13 +46,13 @@ CREATE TABLE IF NOT EXISTS `vrachi` (
 
 CREATE TABLE `clinics` (
 	`id` int NOT NULL AUTO_INCREMENT,
-	`name` longtext(150) NOT NULL,
-	`city` longtext(150) NOT NULL,
-	`street` longtext(150) NOT NULL,
+	`name` longtext NOT NULL,
+	`city` longtext NOT NULL,
+	`street` longtext NOT NULL,
 	`house` TEXT(20) NOT NULL,
-	`specializations` longtext(1500) NOT NULL,
-	`services` longtext(3000) NOT NULL,
-	`doctors` longtext(200) NOT NULL,
+	`specializations` longtext NOT NULL,
+	`services` longtext NOT NULL,
+	`doctors` longtext NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -95,21 +95,19 @@ CREATE TABLE IF NOT EXISTS `svobodnoevremya` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk0` FOREIGN KEY (`specialization`) REFERENCES `services`(`specialization`);
+ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk0` FOREIGN KEY (`Napravlenie`) REFERENCES `services`(`specialization`);
 
-ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk1` FOREIGN KEY (`service`) REFERENCES `services`(`servuce`);
+ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk1` FOREIGN KEY (`Usluga`) REFERENCES `services`(`service`);
 
-ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk2` FOREIGN KEY (`doctor`) REFERENCES `svobodnoevremya`(`id_doctor`);
+ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk2` FOREIGN KEY (`Vrach`) REFERENCES `svobodnoevremya`(`idvrach`);
 
-ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk3` FOREIGN KEY (`date`) REFERENCES `svobodnoevremya`(`date`);
+ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk3` FOREIGN KEY (`Data`) REFERENCES `svobodnoevremya`(`Data`);
 
-ALTER TABLE `vrachi` ADD CONSTRAINT `vrachi_fk0` FOREIGN KEY (`Naprvlenie`) REFERENCES `services`(`specialization`);
-
-ALTER TABLE `vrachi` ADD CONSTRAINT `vrachi_fk1` FOREIGN KEY (`Usluga`) REFERENCES `services`(`servuce`);
+ALTER TABLE `vrachi` ADD CONSTRAINT `vrachi_fk0` FOREIGN KEY (`Special`) REFERENCES `services`(`specialization`);
 
 ALTER TABLE `vrachi` ADD CONSTRAINT `vrachi_fk2` FOREIGN KEY (`Clinica`) REFERENCES `clinics`(`id`);
 
-ALTER TABLE `svobodnoevremya` ADD CONSTRAINT `svobodnoevremya_fk0` FOREIGN KEY (`id_doctor`) REFERENCES `vrachi`(`id`);
+ALTER TABLE `svobodnoevremya` ADD CONSTRAINT `svobodnoevremya_fk0` FOREIGN KEY (`idvrach`) REFERENCES `vrachi`(`id`);
 
-ALTER TABLE `svobodnoevremya` ADD CONSTRAINT `svobodnoevremya_fk1` FOREIGN KEY (`date`) REFERENCES `vrachi`(`RabDni`);
+ALTER TABLE `svobodnoevremya` ADD CONSTRAINT `svobodnoevremya_fk1` FOREIGN KEY (`Data`) REFERENCES `vrachi`(`RabDni`);
 
