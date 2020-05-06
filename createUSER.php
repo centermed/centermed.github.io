@@ -6,22 +6,12 @@
 
 <body>
 	<?PHP 
-	$link=mysqli_connect("localhost","root","");
 	$host_name="localhost";
-	$user = "admin";
-	$password = "123";
+	$user = "id13589731_centermed";
+	$password = "e#EHG(YqO(X)Uy8jTSYy";
 	
-	if($link)
-	{
-		echo "Пользователь root создан <br>";
-
-	}
-	else
-	{ 
-	    echo "Пользователь root не создан <br>";	
-	}
 	
-	$query= "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' IDENTIFIED BY '123' WITH GRANT OPTION";
+	$query= "GRANT ALL PRIVILEGES ON *.* TO 'id13589731_centermed'@'localhost' IDENTIFIED BY 'e#EHG(YqO(X)Uy8jTSYy' WITH GRANT OPTION";
 	
 	if(mysqli_query($link,$query))
 	{
