@@ -95,21 +95,21 @@ CREATE TABLE IF NOT EXISTS `svobodnoevremya` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `Запись` ADD CONSTRAINT `Запись_fk0` FOREIGN KEY (`specialization`) REFERENCES `services`(`specialization`);
+ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk0` FOREIGN KEY (`specialization`) REFERENCES `services`(`specialization`);
 
-ALTER TABLE `Запись` ADD CONSTRAINT `Запись_fk1` FOREIGN KEY (`service`) REFERENCES `services`(`servuce`);
+ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk1` FOREIGN KEY (`service`) REFERENCES `services`(`servuce`);
 
-ALTER TABLE `Запись` ADD CONSTRAINT `Запись_fk2` FOREIGN KEY (`doctor`) REFERENCES `Свободное время для записи.`(`id_doctor`);
+ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk2` FOREIGN KEY (`doctor`) REFERENCES `svobodnoevremya`(`id_doctor`);
 
-ALTER TABLE `Запись` ADD CONSTRAINT `Запись_fk3` FOREIGN KEY (`date`) REFERENCES `Свободное время для записи.`(`date`);
+ALTER TABLE `zapis` ADD CONSTRAINT `zapis_fk3` FOREIGN KEY (`date`) REFERENCES `svobodnoevremya`(`date`);
 
-ALTER TABLE `Врачи` ADD CONSTRAINT `Врачи_fk0` FOREIGN KEY (`Специализация`) REFERENCES `services`(`specialization`);
+ALTER TABLE `vrachi` ADD CONSTRAINT `vrachi_fk0` FOREIGN KEY (`Naprvlenie`) REFERENCES `services`(`specialization`);
 
-ALTER TABLE `Врачи` ADD CONSTRAINT `Врачи_fk1` FOREIGN KEY (`Услуги`) REFERENCES `services`(`servuce`);
+ALTER TABLE `vrachi` ADD CONSTRAINT `vrachi_fk1` FOREIGN KEY (`Usluga`) REFERENCES `services`(`servuce`);
 
-ALTER TABLE `Врачи` ADD CONSTRAINT `Врачи_fk2` FOREIGN KEY (`Клиника`) REFERENCES `clinics`(`id`);
+ALTER TABLE `vrachi` ADD CONSTRAINT `vrachi_fk2` FOREIGN KEY (`Clinica`) REFERENCES `clinics`(`id`);
 
-ALTER TABLE `Свободное время для записи.` ADD CONSTRAINT `Свободное время для записи._fk0` FOREIGN KEY (`id_doctor`) REFERENCES `Врачи`(`id`);
+ALTER TABLE `svobodnoevremya` ADD CONSTRAINT `svobodnoevremya_fk0` FOREIGN KEY (`id_doctor`) REFERENCES `vrachi`(`id`);
 
-ALTER TABLE `Свободное время для записи.` ADD CONSTRAINT `Свободное время для записи._fk1` FOREIGN KEY (`date`) REFERENCES `Врачи`(`Рабочии дни на месяц`);
+ALTER TABLE `svobodnoevremya` ADD CONSTRAINT `svobodnoevremya_fk1` FOREIGN KEY (`date`) REFERENCES `vrachi`(`RabDni`);
 
