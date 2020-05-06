@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `zapis` (
   `Imya` tinytext NOT NULL,
   `Otchestvo` tinytext NOT NULL,
   `Telefon` tinytext NOT NULL,
-  `Napravlenie` longtext NOT NULL,
+  `Napravlenie` TEXT NOT NULL,
   `Usluga` int(10) NOT NULL,
   `Vrach` int(10) NOT NULL,
   `Data` tinytext NOT NULL,
@@ -18,15 +18,15 @@ CREATE TABLE `call` (
 	`fio` TEXT(20) NOT NULL,
 	`number` bigint(11) NOT NULL,
 	PRIMARY KEY (`id`)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 CREATE TABLE `services` (
 	`id` int NOT NULL AUTO_INCREMENT,
-	`specialization` longtext NOT NULL,
+	`specialization` TEXT NOT NULL,
 	`service` longtext,
 	`price` int(10) NOT NULL,
 	PRIMARY KEY (`id`)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 CREATE TABLE IF NOT EXISTS `vrachi` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `vrachi` (
   `Clinica` text NOT NULL,
   `Cabinet` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 CREATE TABLE `clinics` (
 	`id` int NOT NULL AUTO_INCREMENT,
@@ -54,7 +54,7 @@ CREATE TABLE `clinics` (
 	`services` longtext NOT NULL,
 	`doctors` longtext NOT NULL,
 	PRIMARY KEY (`id`)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 CREATE TABLE IF NOT EXISTS `svobodnoevremya` (
   `id` int(11) NOT NULL,
