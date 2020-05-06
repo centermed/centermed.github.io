@@ -23,11 +23,7 @@
 		echo "База не выбрана или была уже выбрана ранее!<br>";
 	}
 	
-	mysqli_query($link, "SET NAMES cp1251") or exit(mysql_error());
-
-    mysqli_query($link, "SET CHARACTER SET cp1251") or exit(mysql_error());
-
-	$res = $_POST['submit'];
+    $res = $_POST['submit'];
 	
 	if($res){
 	$form_Zapic_familyname = $_POST['familyname'];
@@ -40,8 +36,7 @@
 	$Usluga = $_POST['Usluga'];
 	$direction = $_POST['direction'];
 	
-	
-    $query = "INSERT INTO `zapis`(`Familia`, `Imya`, `Otchestvo`, `Telefon`, `Napravlenie`, `Usluga`, `Vrach`, `Data`, `Vremya`) VALUES ('$form_Zapic_familyname', '$form_Zapic_name', '$form_Zapic_secondname', '$form_Zapic_number','$direction',  '$Usluga','$num_vrach','$form_Zapic_date','$form_Zapic_time')";
+   $query = "INSERT INTO `zapis`(`Familia`, `Imya`, `Otchestvo`, `Telefon`, `Napravlenie`, `Usluga`, `Vrach`, `Data`, `Vremya` ,`Adress_Kliniki` ) VALUES ('$form_Zapic_familyname', '$form_Zapic_name', '$form_Zapic_secondname', '$form_Zapic_number','$direction','$Usluga','$num_vrach','$form_Zapic_date','$form_Zapic_time', 'Адрес')";
 	
 	
 	$result_bd = mysqli_query($link, $query);
@@ -55,9 +50,6 @@
 	}
 	
 	}
-	
-	
-	
 	
 	?>
 
