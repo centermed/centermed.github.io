@@ -1,7 +1,7 @@
 body{
   color: #707070;
   font-family: 'Segoe UI';
-  font-size: 1.3em;
+  font-size: 1.2em;
   /*background: #FFFAFA; F8F8FF*/
   background: #F8F8FF;
   width: 100%;
@@ -46,6 +46,9 @@ a:hover{
 	font-size: 16px;
 	margin-top: 10px;
 }
+.col-sm-6{
+  width:50%;
+}
 
 .hier{
 	padding-top: 10px;
@@ -57,6 +60,10 @@ a:hover{
   top: 0;
   background: #F8F8FF;
   z-index: 50;
+  font-size: 1.2em;
+}
+.col-sm-3{
+  width:30%;
 }
 
 .after-menu{
@@ -73,7 +80,7 @@ a:hover{
 }
 
 .slider{
-	margin-top: -8px;
+	margin-top: -12px;
 	margin-bottom: 10px;
   justify-content: center;
 }
@@ -83,15 +90,25 @@ a:hover{
   padding-left: 0px;
   margin-left: 0px;
   width: 100%;
+  position: relative;
 }
 
 .slider a{
   z-index: 5;
 }
+.slider .col-12{
+  padding:0px;
+}
+
+@media (max-width: 575.98px) {
+  .slider{
+    margin-top: 80px;
+  }
+}
 
 .slider__control {
   position: absolute;
-  top: 50%;
+  top: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +134,7 @@ a:hover{
 }
 
 .slider__control_next {
-  right: 0;
+  right:0;
 }
 
 .slider__control::before {
@@ -140,6 +157,12 @@ a:hover{
 .sosials img{
   float:left;
   margin-top: 18px;
+}
+
+@media (max-width: 575.98px) {
+  .sosials{
+    display: none;
+  }
 }
 .logobot{
   padding: 15px;
@@ -222,6 +245,9 @@ a:hover{
   width: 100%;
   font-size: 0.9em;
   height: 60px;
+}
+.col-sm-4 .record{
+  width:50%;
 }
 
 .record:focus,
