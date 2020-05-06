@@ -1,7 +1,7 @@
 <?PHP 
 $hostname = "localhost";
-$login = "admin";
-$password = "123";
+$login = "id13589731_centermed";
+$password = "e#EHG(YqO(X)Uy8jTSYy";
 $link = mysqli_connect($hostname,$login, $password);
 if($link)
 {
@@ -13,7 +13,7 @@ else
 	echo "Пользователь $login не подключен!";?> <br><?PHP
 }
 
-$dbname = "basepd";
+$dbname = "id13589731_basepd";
 if(mysqli_select_db($link,$dbname))
 {
 	echo "База $dbname подключена";?> <br><?PHP

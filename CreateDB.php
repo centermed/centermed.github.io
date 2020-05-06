@@ -1,9 +1,9 @@
 <?PHP
 	
 	$host_name="localhost";
-	$user = "admin";
-	$password = "123";
-	$dbname = "databasepd";
+	$user = "id13589731_centermed";
+	$password = "e#EHG(YqO(X)Uy8jTSYy";
+	$dbname = "id13589731_basepd";
 	$link = mysqli_connect($host_name,$user,$password);
 	if($link)
 	{
