@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `zapis` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `Familia` tinytext NOT NULL,
   `Imya` tinytext NOT NULL,
   `Otchestvo` tinytext NOT NULL,
