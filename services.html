@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="shortcut icon" href="media/logo.svg" type="image/png">
+
+    <title>О нас</title>
+</head>
+<body>
+<script src="script.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<div class = "hier container-fluid">
+    <div class = "row">
+        <div class = "logo col-2 offset-1">
+            <b><a href="index.html">ЦЕНТРМЕД</a></b></div>
+        <div class = "call col-4 offset-1" align="center">
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenter2">
+                <img src = "media/icon.png" width="16px">
+                Заказать обратный звонок</a>
+        </div>
+        <div class = "col-2 offset-1">
+            <a href="record.html">
+                <button class = 'record' href = "record.html"><b>Онлайн-запись</b></button>
+            </a>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2 offset-1" align="center">
+            <a href="clinic.html"><b>Клиника</b></a>
+        </div>
+        <div class = "col-2" align="center">
+            <a href="services.html"><b>Услуги</b></a>
+        </div>
+        <div class = "col-2" align="center">
+            <a href="prices.html"><b>Цены</b></a>
+        </div>
+        <!--<div class = "col-2" align="center">
+          <a href="doctors.html"><b>Врачи</b></a>
+        </div>-->
+        <div class = "col-2" align="center">
+            <a href="contacts.html"><b>Контакты</b></a>
+
+        </div>
+        <div class = "col-2" align="center">
+            <a href="to_patients.html"><b>Пациентам</b></a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter2Title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Заказать обратный звонок</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">ФИО</label>
+                        <input type="text" class="form-control" id="name" placeholder="Иванов Иван Иванович">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Номер телефона</label>
+                        <input type="phone" class="form-control" id="number" placeholder="+7(922)1212120">
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class = "after-menu container-fluid">
+    <div class = "row justify-content-center">
+        <div class = "col-9" align="justify">
+            <br>
+            <h2 align="left"><b>Услуги</b></h2>
+
+            #тут нужен js
+
+        </div>
+    </div>
+</div>
+
+
+<footer class = "container">
+    <div class = "row">
+        <div class = "sosials col-3 offset-1" align = left>
+            <img onclick="img_click()" onmouseenter="img_enter()" onmouseleave="img_leave()" id="logomed" src = 'media/cmg.svg' width="70%" class = 'logobot'>
+            <div class = "icon">
+                <a href="#">
+                    <img src = "media/vk.png" width="20%">
+                </a>
+                <a href="#">
+                    <img src = "media/google.png" width="20%">
+                </a>
+                <a href="#">
+                    <img src = "media/facebook.png" width="20%">
+                </a>
+            </div>
+        </div>
+        <div class = "col-2">
+            <ul>
+                <li><a href="to_patients.html"><b>Пациентам</b></a></li>
+                <li><a href="questions.html">Вопросы и ответы</a></li>
+                <li><a href="diseases.html">Заболевания</a></li>
+                <li><a href="directory.html">Справочник пациента</a></li>
+            </ul>
+        </div>
+        <div class = "col-2">
+            <ul>
+                <li><a href="clinic.html"><b>Клиника</b></a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="stocks.html">Акции</a></li>
+                <li><a href="prices.html">Цены</a></li>
+            </ul>
+        </div>
+        <div class = "col-3">
+            <ul>
+                <li><a href="contacts.html"><b>Контакты</b></a></li>
+                <li>Москва, м. ВДНХ,
+                    ул. Бориса Галушкина, 3</li>
+                <li>8 (495) 191-29-60</li>
+                <li>hello@cm.ru</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
