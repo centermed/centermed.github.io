@@ -196,50 +196,70 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+              
+            <form name = "Zapis" action = "GetDataFromFromRecord.php" method = "POST">
               <div class="form-group">
                 <label for="familyname">Фамилия</label>
-                <input type="text" class="form-control" id="familyname" placeholder="Иванов">
+                <input type="text" class="form-control" name="familyname" placeholder="Иванов">
               </div>
               <div class="form-group">
                 <label for="name">Имя</label>
-                <input type="text" class="form-control" id="name" placeholder="Иван">
+                <input type="text" class="form-control" name="name" placeholder="Иван">
               </div>
               <div class="form-group">
                 <label for="secondname">Отчество</label>
-                <input type="text" class="form-control" id="secondname" placeholder="Иванович">
+                <input type="text" class="form-control" name="secondname" placeholder="Иванович">
               </div>
               <div class="form-group">
                 <label for="number">Номер телефона</label>
-                <input type="phone" class="form-control" id="number" placeholder="+7(922)1212120">
+                <input type="text" class="form-control" name="number" placeholder="+7(922)-984-33-17">
               </div>
               <div class="form-group">
-                <label for="information">Информация о приёме</label>
+                <label for="information">Полноая информация по записи</label>
                 <div class= "row">
                   <div class="col">
-                    <input type="text" class="form-control" id="direction" placeholder="Офтальмолог" readonly>
+                    <select name = "direction">
+				
+ 			 <option value = "1">Направление 1</option>
+  			 <option value= "2">Направление 2</option>
+			 <option value="3">Направление 3</option>
+  			 <option value="4">Направление 4</option>			
+			</select>
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" id="service" placeholder="Первичный приём" readonly>
+                      <select name = "Usluga">
+				
+ 			 <option value = "1">Услуга 1</option>
+  			 <option value= "2">Услуга 2</option>
+			 <option value="3">Услуга 3</option>
+  			 <option value="4">Услуга 4</option>			
+			</select>
                   </div>
                 </div>
-                <input type="text" class="form-control" id="doctor" placeholder="Геннадий Иванович Доктор" readonly>
+                  <select name = "Vrach_nom" >
+				
+ 			 <option value ="1">Врач 1</option>
+  			 <option value ="2">Врач 2</option>
+			 <option value ="3">Врач 3</option>
+  			 <option value ="4">Врач 4</option>			
+			</select>
               </div>
               <div class="form-group">
-                <label for="datetime">Дата и время приема</label>
+                <label for="datetime">Время приема</label>
                 <div class= "row">
                   <div class="col">
-                    <input type="text" class="form-control" id="date" placeholder="12.05.2020" readonly>
+                    <input type="text" class="form-control" name="date" placeholder="13.05.2020">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" id="time" placeholder="16:30" readonly>
+                    <input type="text" class="form-control" name="time" placeholder="16:30-17:30">
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="price">Цена</label>
-                <input type="text" class="form-control" id="price" placeholder="2100 &#8381" readonly>
+                <input type="text" class="form-control" name="price" placeholder="2100 &#8381" readonly>
               </div>
+				<input name = "submit" type="submit" value = "Отправить"class="btn btn-primary">
             </form>
           </div>
           <div class="modal-footer">
