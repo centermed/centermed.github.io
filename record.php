@@ -178,7 +178,13 @@ $arrayOfids = mysqli_fetch_array($res_ids);
                 <img src = "https://www.thiswaifudoesnotexist.net/example-20134.jpg";">
               </div>
               <div class = "text-doctor col-5" align = left>
-                <p id="speciality" value="Терапевт"><?PHP echo $arrayOfids['Special']; ?></p>
+              <?PHP $key = $arrayOfids['Special'];
+                $query = "SELECT specialization FROM specializations WHERE id = $key";
+                $res = mysqli_query($link, $query);
+                $array = mysqli_fetch_array($res); ?>
+              
+                <p id="speciality" value="Терапевт"><?PHP echo $array['specialization']; ?></p>
+                
                 <h2><b id="nameofdoctor"><?PHP echo $arrayOfids['Familia']; echo " "; echo $arrayOfids['Imya']; echo " "; echo $arrayOfids['Otch']; ?> </b></h2>
                 <p>Стаж <?PHP  echo $arrayOfids['Stag']; ?> лет</p>
                 <p><?PHP echo $arrayOfids['Relagii']; ?></p>
