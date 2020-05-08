@@ -11,3 +11,8 @@
 	margin-left: 3.2em;
 	margin-top: 5.5em;
 }
+.photo img{
+	border-radius: 20px;
+	width: 100%;
+	margin:0;
+}
