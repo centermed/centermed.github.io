@@ -92,6 +92,10 @@ a:hover{
   width: 100%;
   position: relative;
 }
+.sl-max{
+  position: relative;
+  height: 700px;
+}
 
 .slider a{
   z-index: 5;
@@ -173,6 +177,11 @@ a:hover{
   .hier{
     font-size: 0.9em;
   }
+  .sl-max{
+  height: 270px;
+  }
+.slider__control {
+  top: 70%;
 }
 
 }
