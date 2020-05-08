@@ -15,6 +15,7 @@
 	border-radius: 20px;
 	width: 100%;
 	margin:0;
+	margin-bottom: 10px;
 }
 
 @media (max-width: 575.98px) {
@@ -22,7 +23,7 @@
 		display: none;
 	}
 	.map h1{
-		margin-left: 2em;
+		margin-left: 0.8em;
 		margin-top: 6em;
 	}
 }

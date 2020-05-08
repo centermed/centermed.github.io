@@ -4,8 +4,8 @@
     else if(a==0 && i>1) i--;
     else if(a==1 && i<5) i++;
     else if(a==1 && i==5) i=1;
-    if(i>2) var s="media/slide"+i+".jpg"
-    else var s="media/slide"+i+".png"
+    if(i==2) var s="media/slide"+i+".png"
+    else var s="media/slide"+i+".jpg"
     document.getElementById("slide_id").src=s;
 
   }
