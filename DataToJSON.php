@@ -43,7 +43,9 @@ $Specializacia = $array['specialization'];
 $masOfVrachi[$i] = array(ФИО => $str_name, Стаж => $Stag, Регалия=>$Regalii, Специализация => $Specializacia);
 
 }
+
                        
 var_export(json_encode($masOfVrachi, JSON_UNESCAPED_UNICODE));  // Перекодировать в формат и записать в файл.
   file_put_contents('DATA.json',json_encode($masOfVrachi, JSON_UNESCAPED_UNICODE));
+ 
 ?>
