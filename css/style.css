@@ -92,18 +92,16 @@ a:hover{
   width: 100%;
   position: relative;
 }
+.sl-max{
+  position: relative;
+  height: 700px;
+}
 
 .slider a{
   z-index: 5;
 }
 .slider .col-12{
   padding:0px;
-}
-
-@media (max-width: 575.98px) {
-  .slider{
-    margin-top: 80px;
-  }
 }
 
 .slider__control {
@@ -160,6 +158,9 @@ a:hover{
 }
 
 @media (max-width: 575.98px) {
+  .slider{
+    margin-top: 60px;
+  }
   .sosials{
     display: none;
   }
@@ -169,6 +170,18 @@ a:hover{
   .slider__control {
     width: 20px;
     height: 30px;
+  }
+  .info{
+    margin-top: 60px;
+  }
+  .hier{
+    font-size: 0.9em;
+  }
+  .sl-max{
+  height: 270px;
+  }
+.slider__control {
+  top: 70%;
 }
 
 }
