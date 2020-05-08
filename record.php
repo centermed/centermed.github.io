@@ -178,7 +178,8 @@ $arrayOfids = mysqli_fetch_array($res_ids);
                 <img src = "https://www.thiswaifudoesnotexist.net/example-20134.jpg";">
               </div>
               <div class = "text-doctor col-5" align = left>
-              <?PHP $key = $arrayOfids['Special'];
+              <?PHP 
+                $key = $arrayOfids['Special'];
                 $query = "SELECT specialization FROM specializations WHERE id = $key";
                 $res = mysqli_query($link, $query);
                 $array = mysqli_fetch_array($res); ?>
