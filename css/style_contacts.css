@@ -16,3 +16,13 @@
 	width: 100%;
 	margin:0;
 }
+
+@media (max-width: 575.98px) {
+	footer{
+		display: none;
+	}
+	.map h1{
+		margin-left: 2em;
+		margin-top: 6em;
+	}
+}

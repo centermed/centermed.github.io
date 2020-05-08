@@ -100,12 +100,6 @@ a:hover{
   padding:0px;
 }
 
-@media (max-width: 575.98px) {
-  .slider{
-    margin-top: 80px;
-  }
-}
-
 .slider__control {
   position: absolute;
   top: 60%;
@@ -160,6 +154,9 @@ a:hover{
 }
 
 @media (max-width: 575.98px) {
+  .slider{
+    margin-top: 60px;
+  }
   .sosials{
     display: none;
   }
@@ -169,6 +166,13 @@ a:hover{
   .slider__control {
     width: 20px;
     height: 30px;
+  }
+  .info{
+    margin-top: 60px;
+  }
+  .hier{
+    font-size: 0.9em;
+  }
 }
 
 }
