@@ -201,31 +201,31 @@
                 <img src ='+source+'>\
               </div>\
               <div class = "text-doctor col-5" align = left>\
-                <p id="speciality'+d+'" value="Терапевт">'+speciality+'</p>\
-                <h2><b id="nameofdoctor'+d+'">'+name+'</b></h2>\
+                <p id="speciality'+i+'" value="Терапевт">'+speciality+'</p>\
+                <h2><b id="nameofdoctor'+i+'">'+name+'</b></h2>\
                 <p> Стаж '+work_age+'</p>\
                 <p>'+university+'</p>\
                 </div>\
               <div class = "record-panel col-5">\
                 <p>Выберите время приема для записи онлайн</p>\
                 <div class = \'button-panel\'>\
-                  <button id=\'left\' class = \'left\' onmouseover="colorchange(\'left\')" onclick="setDate(\'left\')">Среда,11</button>\
-                  <button id=\'center\' class = \'center\' onmouseover="colorchange(\'center\')" onclick="setDate(\'center\')">Четверг,12</button>\
-                  <button id=\'right\' class = \'right\' onmouseover="colorchange(\'right\')" onclick="setDate(\'right\')">Пятница,13</button>\
+                  <button id=\'left'+i+'\' class = \'left\' onmouseover="colorchange(\'left\','+i+')" onclick="setDate(\'left\','+i+')">Среда,11</button>\
+                  <button id=\'center'+i+'\' class = \'center\' onmouseover="colorchange(\'center\','+i+')" onclick="setDate(\'center\','+i+')">Четверг,12</button>\
+                  <button id=\'right'+i+'\' class = \'right\' onmouseover="colorchange(\'right\','+i+')" onclick="setDate(\'right\','+i+')">Пятница,13</button>\
                 </div>\
                 <div class = \'time-panel\' onclick=>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:00\')">13:00</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:30\')">13:30</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:50\')">13:50</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:10\')">14:10</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:30\')">14:30</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:50\')">14:50</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:10\')">15:10</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:30\')">15:30</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:50\')">15:50</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:10\')">16:10</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:30\')">16:30</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:50\')">16:50</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:00\','+i+')">13:00</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:30\','+i+')">13:30</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:50\','+i+')">13:50</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:10\','+i+')">14:10</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:30\','+i+')">14:30</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:50\','+i+')">14:50</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:10\','+i+')">15:10</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:30\','+i+')">15:30</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:50\','+i+')">15:50</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:10\','+i+')">16:10</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:30\','+i+')">16:30</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:50\','+i+')">16:50</button>\
                 </div>\
                 <p class = \'number\'>Телефон для записи: 8(499)519-37-05</p>\
               </div>\
