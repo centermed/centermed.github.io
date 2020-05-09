@@ -149,8 +149,6 @@
                 <h2><b id="nameofdoctor">Еременко Валерий Сергеевич</b></h2>
                 <p>Стаж 21 год</p>
                 <p>к.м.н</p>
-                <h2><b>2100 &#8381</b></h2>
-                <p class = 'time-ago'><img src = "media/gall.png">Последняя запись к этому врачу была 2 часа назад</p>
               </div>
               <div class = "record-panel col-5">
                 <p>Выберите время приема для записи онлайн</p>
@@ -187,6 +185,9 @@
       name=mydata[i].ФИО;
       speciality=mydata[i].Специализация;
       work_age=mydata[i].Стаж;
+      if(work_age%10>=5 || work_age%10==0 || (work_age>10 && work_age<20)) work_age+=" лет"
+        else if(work_age%10==1) work_age+=" год"
+          else work_age += " года"
       university=mydata[i].Регалия;
       if(university=="0") university=" ";
       cost="бесценно";
@@ -202,10 +203,9 @@
               <div class = "text-doctor col-5" align = left>\
                 <p id="speciality'+d+'" value="Терапевт">'+speciality+'</p>\
                 <h2><b id="nameofdoctor'+d+'">'+name+'</b></h2>\
-                <p> Стаж '+work_age+' лет</p>\
+                <p> Стаж '+work_age+'</p>\
                 <p>'+university+'</p>\
-                <p class = \'time-ago\'><img src = "media/gall.png">Последняя запись к этому врачу была 2 часа назад</p>\
-              </div>\
+                </div>\
               <div class = "record-panel col-5">\
                 <p>Выберите время приема для записи онлайн</p>\
                 <div class = \'button-panel\'>\
