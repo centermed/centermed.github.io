@@ -84,7 +84,25 @@ a:hover{
 	margin-bottom: 10px;
   justify-content: center;
 }
-
+.text-slider{
+  position: absolute;
+  top: 46%;
+  left: 16%;
+  max-width: 520px;
+  font-size: 2.5em;
+  line-height: 1.2em;
+  color:white;
+}
+.shadow{
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  bottom:0;
+  height: 700px;
+  background: linear-gradient(to top,rgba(0,0,0,.4),rgba(0,0,0,0) 75%);
+  pointer-events: none;
+  content: "";
+}
 .slider {
   padding-right: 0px;
   padding-left: 0px;
