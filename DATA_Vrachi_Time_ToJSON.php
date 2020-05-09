@@ -72,11 +72,15 @@ $masOfTime[$i] = array(id_Врача => $id_vrach, Дата => $Date, Время
 Время27 => $Time27,Время28 => $Time28,Время29 => $Time29,Время30 => $Time30,
 Время31 => $Time1,Время31 => $Time1,Время32 => $Time32);
 
-}
 
-                       
-var_export(json_encode($masOfTime, JSON_UNESCAPED_UNICODE));  
-  file_put_contents('DATA_Vrach_Time.json',json_encode($masOfTime, JSON_UNESCAPED_UNICODE));
+$str = $str.implode( ',', $masOfTime[$i]).";";
+}
+$str = "\n\n data_time_svobod = "."'".$str."'".";";
+
+$fd = fopen("Data_Vrachi_Time.txt", 'w') or die("не удалось создать файл");
+fwrite($fd, $str);
+fclose($fd);
+
   
 
   

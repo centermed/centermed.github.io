@@ -37,12 +37,13 @@ $Price = $arrayOfids['price'];
 
 $masOfUsluga[$i] = array(Направление => $Specializacia, Услуга => $Service, Цена => $Price);
 
+$str = $str.implode( ',', $masOfUsluga[$i]).";";
 }
+$str = "\n\n data_usluga = "."'".$str."'".";";
 
-                       
-var_export(json_encode($masOfUsluga, JSON_UNESCAPED_UNICODE));  // Перекодировать в формат и записать в файл.
-  file_put_contents('DATA_Services.json',json_encode($masOfUsluga, JSON_UNESCAPED_UNICODE));
-  
+$fd = fopen("Data_Services.txt", 'w') or die("не удалось создать файл");
+fwrite($fd, $str);
+fclose($fd);
 
   
 ?>
