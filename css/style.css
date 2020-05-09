@@ -179,45 +179,6 @@ a:hover{
   margin-top: 18px;
 }
 
-@media (max-width: 575.98px) {
-  .slider{
-    margin-top: 60px;
-  }
-  .sosials{
-    display: none;
-  }
-  .inform h2{
-    font-size: 1em;
-  }
-  .slider__control {
-    width: 20px;
-    height: 30px;
-  }
-  .info{
-    margin-top: 60px;
-  }
-  .hier{
-    font-size: 0.9em;
-  }
-  .sl-max{
-    height: 270px;
-  }
-  .slider__control {
-    top: 70%;
-  }
-  #slide_id{
-    height:100%;
-  }
-  .text-slider{
-    top: 60%;
-    left: 10%;
-    width: 140px;
-    font-size: 0.7em;
-    line-height: 1em;
-    color:white;
-  }
-
-}
 .logobot{
   padding: 15px;
 }
@@ -398,4 +359,3 @@ a:hover{
 .form-group label{
   font-size: 0.98em;
 }
-
