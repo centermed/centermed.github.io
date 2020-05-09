@@ -48,7 +48,15 @@ while($p<=$kol+1)
 	$q = "SELECT RabTime,RabDni,id FROM vrachi WHERE id='$trig'";
 	$res = mysqli_query($link,$q);
 	$mass_vrach = mysqli_fetch_array($res);
-	
+	if($res)
+	{
+		echo "Поля из vrachi выбраны <br>";
+	}
+	else
+	{
+		echo "Поля из vrachi не выбраны <br>";
+	}
+
 	$arrayOfRabTime =explode(';',$mass_vrach['RabTime']);
 	$arrayOfRabDni = explode(';',$mass_vrach['RabDni']);
 	$idvracha = $mass_vrach['id'];
@@ -69,12 +77,21 @@ while($p<=$kol+1)
 					$d++;
 				
 			}	
+			
 	
 	$i=1;
 	
 	
 $p++;
 }
+if($result)
+			{
+				echo "Время успешно добавлено";
+			}
+			else
+			{
+				echo "Время не было добавлено";
+			}
 
 
 
