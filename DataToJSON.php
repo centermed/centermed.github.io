@@ -17,7 +17,7 @@ $countids = $arrayOfids[0];
 
 $file = file_get_contents('DATA.json');
 $arrayOfVrach = json_decode($file,TRUE);
- 
+ $str='';
 for($i=0; $i<$countids; $i++){
 $query = "SELECT * FROM `vrachi` WHERE id = $i";
 
@@ -42,12 +42,12 @@ $Specializacia = $array['specialization'];
 
 $masOfVrachi[$i] = array(ФИО => $str_name, Стаж => $Stag, Регалия=>$Regalii, Специализация => $Specializacia);
 
+$str = $str.implode( ',', $masOfVrachi[$i]).";";
 }
+$str = " \n\n data_vrachi = "."'".$str."'".";";
 
-                       
-var_export(json_encode($masOfVrachi, JSON_UNESCAPED_UNICODE));  // Перекодировать в формат и записать в файл.
-  file_put_contents('DATA.json',json_encode($masOfVrachi, JSON_UNESCAPED_UNICODE));
-  
+$fd = fopen("DATA.txt", 'w') or die("не удалось создать файл");
+fwrite($fd, $str);
+fclose($fd);
 
-  
 ?>
