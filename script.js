@@ -25,16 +25,16 @@
    document.getElementById("direction").placeholder=document.getElementById("speciality").getAttribute('value');
    document.getElementById("doctor").placeholder=document.getElementById("nameofdoctor").textContent;
 }
-function setDate(button_id){
+function setDate(button_id,id){
   k=1;
-  document.getElementById("left").style.color="#707070";
-  document.getElementById("left").style.backgroundColor="#F8F8FF";
-   document.getElementById("center").style.color="#707070";
-  document.getElementById("center").style.backgroundColor="#F8F8FF";
-   document.getElementById("right").style.color="#707070";
-  document.getElementById("right").style.backgroundColor="#F8F8FF";
-	document.getElementById(button_id).style.color="#F8F8FF";
-	document.getElementById(button_id).style.backgroundColor="#2D8FD8";
+  document.getElementById("left"+id).style.color="#707070";
+  document.getElementById("left"+id).style.backgroundColor="#F8F8FF";
+   document.getElementById("center"+id).style.color="#707070";
+  document.getElementById("center"+id).style.backgroundColor="#F8F8FF";
+   document.getElementById("right"+id).style.color="#707070";
+  document.getElementById("right"+id).style.backgroundColor="#F8F8FF";
+	document.getElementById(button_id+id).style.color="#F8F8FF";
+	document.getElementById(button_id+id).style.backgroundColor="#2D8FD8";
 	if(button_id=="left") date=11
 	if(button_id=="center") date=12
 	if(button_id=="right") date=13
