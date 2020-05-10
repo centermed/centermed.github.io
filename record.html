@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="ru">
   <head>
@@ -16,7 +15,9 @@
     <title>Онлайн-запись</title>
   </head>
   <body>
-     <script src="script.js"></script>
+     <script type="text/javascript" id="json" src="DATA.txt" ></script>
+     <script type="text/javascript" src="script.js"></script>
+     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -42,10 +43,6 @@
         </div>
         <div class = "col-2" align="center">
           <a href="services.html"><b>Услуги</b></a>
-          <a href="Free_Time.php"><b>Создать таблу свободного времени</b></a>
-          <a href="DATA_ServicesToJSON.php"><b>Text File1</b></a>
-          <a href="DATA_Vrachi_Time_ToJSON.php"><b>Text File2</b></a>
-          <a href="DataToJSON.php"><b>Text File3</b></a>
         </div>
         <div class = "col-2" align="center">
           <a href="prices.html"><b>Цены</b></a>
@@ -138,99 +135,66 @@
         </div>
       </div>
     </div>
-  
-   
-
-   <?PHP 
-$hostname = "localhost";
-$login = "id13589731_centermed";
-$password = "e#EHG(YqO(X)Uy8jTSYy";
-$link = mysqli_connect($hostname,$login,$password);
-$basename = "id13589731_basepd";
-$select = mysqli_select_db($link,$basename);
-
-$query = "SELECT COUNT(*) FROM vrachi";
-
-$res_ids = mysqli_query($link, $query);
-
-$arrayOfids = mysqli_fetch_array($res_ids);
-
-$countids = $arrayOfids[0];
-
-
-for($i=0; $i<$countids; $i++){
-$query = "SELECT * FROM `vrachi` WHERE id = $i";
-
-$res_ids = mysqli_query($link, $query);
-
-$arrayOfids = mysqli_fetch_array($res_ids);
-
-?>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-
-    <link rel="shortcut icon" href="media/logo.svg" type="image/png">
-<div class = "container">
-      <div class = "row">
-        <div class = "doctor col-10 offset-1" align="center">
-          <div class = "container-fluid">
-            <div class = "row">
-              <div class = "photo col-2">
-            
-              
-                <img src = "https://www.thiswaifudoesnotexist.net/example-20134.jpg";">
-              </div>
-              <div class = "text-doctor col-5" align = left>
-              <?PHP $key = $arrayOfids['Special'];
-                $query = "SELECT specialization FROM specializations WHERE id = $key";
-                $res = mysqli_query($link, $query);
-                $array = mysqli_fetch_array($res); ?>
-              
-                <p id="speciality" value="Терапевт"><?PHP echo $array['specialization']; ?></p>
-                
-                <h2><b id="nameofdoctor"><?PHP echo $arrayOfids['Familia']; echo " "; echo $arrayOfids['Imya']; echo " "; echo $arrayOfids['Otch']; ?> </b></h2>
-                <p>Стаж <?PHP  echo $arrayOfids['Stag']; ?> лет</p>
-                <p><?PHP echo $arrayOfids['Relagii']; ?></p>
-                <h2><b>2100 &#8381</b></h2>
-              </div>
-              <div class = "record-panel col-5">
-                <p>Выберите время приема для записи онлайн</p>
-                <div class = 'button-panel'>
-                  <button id='left' class = 'left' onmouseover="colorchange('left')" onclick="setDate('left')">Среда,11</button>
-                  <button id='center' class = 'center' onmouseover="colorchange('center')" onclick="setDate('center')">Четверг,12</button>
-                  <button id='right' class = 'right' onmouseover="colorchange('right')" onclick="setDate('right')">Пятница,13</button>
-                </div>
-                <div class = 'time-panel' onclick=>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:00')">13:00</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:30')">13:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:50')">13:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:10')">14:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:30')">14:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:50')">14:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:10')">15:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:30')">15:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:50')">15:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:10')">16:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:30')">16:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:50')">16:50</button>
-                </div>
-                <p class = 'number'>Телефон для записи: 8(499)519-37-05</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-<?PHP
-}
-?>
-
-
-    
+    <script> 
+      
+      mydata=data_vrachi.split(';').join(",").split(',');
+      for(var i=0;i<mydata.length/4-1;i++){
+      name=mydata[i*4+0];
+      speciality=mydata[i*4+3];
+      work_age=mydata[i*4+1];
+      if(work_age%10>=5 || work_age%10==0 || (work_age>10 && work_age<20)) work_age+=" лет"
+        else if(work_age%10==1) work_age+=" год"
+          else work_age += " года"
+      university=mydata[i*4+2];
+      if(university=="0") university=" ";
+      cost="бесценно";
+      source="media/photo.png";
+      s='<div class = "container">\
+      <div class = "row">\
+        <div class = "doctor col-10 offset-1" align="center">\
+          <div class = "container-fluid">\
+            <div class = "row">\
+              <div class = "photo col-2">\
+                <img src ='+source+'>\
+              </div>\
+              <div class = "text-doctor col-5" align = left>\
+                <p id="speciality'+i+'" value="Терапевт">'+speciality+'</p>\
+                <h2><b id="nameofdoctor'+i+'">'+name+'</b></h2>\
+                <p> Стаж '+work_age+'</p>\
+                <p>'+university+'</p>\
+                </div>\
+              <div class = "record-panel col-5">\
+                <p>Выберите время приема для записи онлайн</p>\
+                <div class = \'button-panel\'>\
+                  <button id=\'left'+i+'\' class = \'left\' onmouseover="colorchange(\'left\','+i+')" onclick="setDate(\'left\','+i+')">Среда,11</button>\
+                  <button id=\'center'+i+'\' class = \'center\' onmouseover="colorchange(\'center\','+i+')" onclick="setDate(\'center\','+i+')">Четверг,12</button>\
+                  <button id=\'right'+i+'\' class = \'right\' onmouseover="colorchange(\'right\','+i+')" onclick="setDate(\'right\','+i+')">Пятница,13</button>\
+                </div>\
+                <div class = \'time-panel\' onclick=>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:00\','+i+')">13:00</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:30\','+i+')">13:30</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:50\','+i+')">13:50</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:10\','+i+')">14:10</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:30\','+i+')">14:30</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:50\','+i+')">14:50</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:10\','+i+')">15:10</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:30\','+i+')">15:30</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:50\','+i+')">15:50</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:10\','+i+')">16:10</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:30\','+i+')">16:30</button>\
+                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:50\','+i+')">16:50</button>\
+                </div>\
+                <p class = \'number\'>Телефон для записи: 8(499)519-37-05</p>\
+              </div>\
+            </div>\
+          </div>\
+        </div>\
+      </div>\
+    </div>'
+    document.write(s);
+  }
+  //}
+</script>
     <!-- Button trigger modal
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
       Запустить модальное окно
@@ -268,32 +232,41 @@ $arrayOfids = mysqli_fetch_array($res_ids);
               <div class="form-group">
                 <label for="information">Полноая информация по записи</label>
                 <div class= "row">
-                 
+                  <div class="col">
+                    <select name = "direction">
+				
+ 			 <option value = "1">Направление 1</option>
+  			 <option value= "2">Направление 2</option>
+			 <option value="3">Направление 3</option>
+  			 <option value="4">Направление 4</option>			
+			</select>
+                  </div>
                   <div class="col">
                       <select name = "Usluga">
-          
-  			 <option value="" > </option>		
+				
+ 			 <option value = "1">Услуга 1</option>
+  			 <option value= "2">Услуга 2</option>
+			 <option value="3">Услуга 3</option>
+  			 <option value="4">Услуга 4</option>			
 			</select>
                   </div>
                 </div>
-              
-              
+                  <select name = "Vrach_nom" >
+				
+ 			 <option value ="1">Врач 1</option>
+  			 <option value ="2">Врач 2</option>
+			 <option value ="3">Врач 3</option>
+  			 <option value ="4">Врач 4</option>			
+			</select>
+              </div>
               <div class="form-group">
                 <label for="datetime">Время приема</label>
                 <div class= "row">
                   <div class="col">
-                  
-                  
-                  <select name = "Time_Priema">
-                    <option value="">  </option>
-                    </select>
-                    
-                    
+                    <input type="text" class="form-control" name="date" placeholder="13.05.2020">
                   </div>
                   <div class="col">
-                    <select name = "Date_Priema">
-                    <option value="">  </option>
-                    </select>
+                    <input type="text" class="form-control" name="time" placeholder="16:30-17:30">
                   </div>
                 </div>
               </div>
