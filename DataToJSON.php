@@ -40,7 +40,7 @@ $Regalii = $arrayOfids['Relagii'];
 $Specializacia = $array['specialization'];
 
 
-$masOfVrachi[$i] = array(ФИО => $str_name, Стаж => $Stag, Регалия=>$Regalii, Специализация => $Specializacia);
+$masOfVrachi[$i] = array(id => $i, ФИО => $str_name, Стаж => $Stag, Регалия=>$Regalii, Специализация => $Specializacia);
 
 $str = $str.implode( ',', $masOfVrachi[$i]).";";
 }
