@@ -42,6 +42,10 @@
         </div>
         <div class = "col-2" align="center">
           <a href="services.html"><b>Услуги</b></a>
+          <a href="Free_Time.php"><b>Создать таблу свободного времени</b></a>
+          <a href="DATA_ServicesToJSON.php"><b>Text File1</b></a>
+          <a href="DATA_Vrachi_Time_ToJSON.php"><b>Text File2</b></a>
+          <a href="DataToJSON.php"><b>Text File3</b></a>
         </div>
         <div class = "col-2" align="center">
           <a href="prices.html"><b>Цены</b></a>
@@ -178,8 +182,7 @@ $arrayOfids = mysqli_fetch_array($res_ids);
                 <img src = "https://www.thiswaifudoesnotexist.net/example-20134.jpg";">
               </div>
               <div class = "text-doctor col-5" align = left>
-              <?PHP 
-                $key = $arrayOfids['Special'];
+              <?PHP $key = $arrayOfids['Special'];
                 $query = "SELECT specialization FROM specializations WHERE id = $key";
                 $res = mysqli_query($link, $query);
                 $array = mysqli_fetch_array($res); ?>
@@ -265,83 +268,32 @@ $arrayOfids = mysqli_fetch_array($res_ids);
               <div class="form-group">
                 <label for="information">Полноая информация по записи</label>
                 <div class= "row">
-                  <div class="col">
-                    <select name = "direction">
-				
-       <?PHP 
-       $query = "SELECT COUNT(*) FROM specializations";
-
-       $res_ids = mysqli_query($link, $query);
-       
-       $arrayOfids = mysqli_fetch_array($res_ids);
-       
-       $countids = $arrayOfids[0];
-       
-       
-       for($i=0; $i<$countids; $i++){
-       $query = "SELECT id, specialization FROM specializations WHERE id = '$i'";
-       
-       $res = mysqli_query($link, $query);
-       
-       $arrayOfids = mysqli_fetch_array($res);
-       
-       ?>
-  			 <option name = "spec" value="<?PHP echo $arrayOfids['id']; ?>" > <?PHP echo $arrayOfids['specialization']; ?></option>	<?PHP } ?>		
-			</select>
-			
-                  </div>
+                 
                   <div class="col">
                       <select name = "Usluga">
-                      <?PHP 
-       $query = "SELECT COUNT(*) FROM services";
-
-       $res_ids = mysqli_query($link, $query);
-       
-       $arrayOfids = mysqli_fetch_array($res_ids);
-       
-       
-
-       for($i=0; $i<$countids; $i++){
-       $query = "SELECT id, service FROM services WHERE id = '$i'";
-       
-       $res = mysqli_query($link, $query);
-       
-       $arrayOfids = mysqli_fetch_array($res);
-       
-       ?>
-  			 <option value="<?PHP echo $arrayOfids['id']; ?>" > <?PHP echo $arrayOfids['service']; ?></option>	<?PHP } ?>			
+          
+  			 <option value="1" > чета</option>		
 			</select>
                   </div>
                 </div>
-                  <select name = "Vrach_nom" >
-				
-                  <?PHP 
-       $query = "SELECT COUNT(*) FROM vrachi";
-
-       $res_ids = mysqli_query($link, $query);
-       
-       $arrayOfids = mysqli_fetch_array($res_ids);
-       
-       
-
-       for($i=0; $i<$countids; $i++){
-       $query = "SELECT id,Familia,Imya,Otch FROM vrachi WHERE id = $i";
-       
-       $res = mysqli_query($link, $query);
-       
-       $arrayOfids = mysqli_fetch_array($res);
-       $str_Name = $arrayOfids['Familia']." ".$arrayOfids['Imya']." ".$arrayOfids['Otch'];?>
-  			 <option value="<?PHP echo $arrayOfids['id']; ?>" > <?PHP echo $str_Name; ?></option>	<?PHP } ?>		
-			</select>
-              </div>
+              
+              
               <div class="form-group">
                 <label for="datetime">Время приема</label>
                 <div class= "row">
                   <div class="col">
-                    <input type="text" class="form-control" name="date" placeholder="13.05.2020">
+                  
+                  
+                  <select name = "Time_Priema">
+                    <option value="1"> чета </option>
+                    </select>
+                    
+                    
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" name="time" placeholder="16:30-17:30">
+                    <select name = "Date_Priema">
+                    <option value="1"> чета </option>
+                    </select>
                   </div>
                 </div>
               </div>

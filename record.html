@@ -15,7 +15,7 @@
     <title>Онлайн-запись</title>
   </head>
   <body>
-     <script type="text/javascript" src="data.json"></script>
+     <script type="text/javascript" id="json" src="DATA.txt" ></script>
      <script type="text/javascript" src="script.js"></script>
      
     <!-- Optional JavaScript -->
@@ -135,60 +135,17 @@
         </div>
       </div>
     </div>
-
-    <div class = "container">
-      <div class = "row">
-        <div class = "doctor col-10 offset-1" align="center">
-          <div class = "container-fluid">
-            <div class = "row">
-              <div class = "photo col-2">
-                <img src = "media/photo.png">
-              </div>
-              <div class = "text-doctor col-5" align = left>
-                <p id="speciality" value="Терапевт">терапевт</p>
-                <h2><b id="nameofdoctor">Еременко Валерий Сергеевич</b></h2>
-                <p>Стаж 21 год</p>
-                <p>к.м.н</p>
-              </div>
-              <div class = "record-panel col-5">
-                <p>Выберите время приема для записи онлайн</p>
-                <div class = 'button-panel'>
-                  <button id='left' class = 'left' onmouseover="colorchange('left')" onclick="setDate('left')">Среда,11</button>
-                  <button id='center' class = 'center' onmouseover="colorchange('center')" onclick="setDate('center')">Четверг,12</button>
-                  <button id='right' class = 'right' onmouseover="colorchange('right')" onclick="setDate('right')">Пятница,13</button>
-                </div>
-                <div class = 'time-panel' onclick=>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:00')">13:00</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:30')">13:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('13:50')">13:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:10')">14:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:30')">14:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('14:50')">14:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:10')">15:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:30')">15:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('15:50')">15:50</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:10')">16:10</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:30')">16:30</button>
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton('16:50')">16:50</button>
-                </div>
-                <p class = 'number'>Телефон для записи: 8(499)519-37-05</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <script> 
-       var mydata = JSON.parse(data);
-       for(var i=0;i<mydata.length;i++){
-      name=mydata[i].ФИО;
-      speciality=mydata[i].Специализация;
-      work_age=mydata[i].Стаж;
+      
+      mydata=data_vrachi.split(';').join(",").split(',');
+      for(var i=0;i<mydata.length/4-1;i++){
+      name=mydata[i*4+0];
+      speciality=mydata[i*4+3];
+      work_age=mydata[i*4+1];
       if(work_age%10>=5 || work_age%10==0 || (work_age>10 && work_age<20)) work_age+=" лет"
         else if(work_age%10==1) work_age+=" год"
           else work_age += " года"
-      university=mydata[i].Регалия;
+      university=mydata[i*4+2];
       if(university=="0") university=" ";
       cost="бесценно";
       source="media/photo.png";
@@ -235,7 +192,9 @@
       </div>\
     </div>'
     document.write(s);
-  }</script>
+  }
+  //}
+</script>
     <!-- Button trigger modal
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
       Запустить модальное окно
@@ -274,13 +233,7 @@
                 <label for="information">Полноая информация по записи</label>
                 <div class= "row">
                   <div class="col">
-                    <select name = "direction">
-				
- 			 <option value = "1">Направление 1</option>
-  			 <option value= "2">Направление 2</option>
-			 <option value="3">Направление 3</option>
-  			 <option value="4">Направление 4</option>			
-			</select>
+                   
                   </div>
                   <div class="col">
                       <select name = "Usluga">
@@ -292,22 +245,26 @@
 			</select>
                   </div>
                 </div>
-                  <select name = "Vrach_nom" >
-				
- 			 <option value ="1">Врач 1</option>
-  			 <option value ="2">Врач 2</option>
-			 <option value ="3">Врач 3</option>
-  			 <option value ="4">Врач 4</option>			
-			</select>
+                  
               </div>
               <div class="form-group">
                 <label for="datetime">Время приема</label>
                 <div class= "row">
                   <div class="col">
-                    <input type="text" class="form-control" name="date" placeholder="13.05.2020">
+			  
+                      <select name = "Time_Priema">
+                    	<option value="9:00-9:30"> 9:00-9:30 </option>
+	           <option value="9:40-10:10">9:40-10:10 </option>	      
+                    </select>
+			  
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" name="time" placeholder="16:30-17:30">
+			  
+                     <select name = "Date_Priema">
+                    <option value="1.05.20"> 1.05.20 </option>
+	           <option value="2.05.20"> 2.05.20 </option>	
+			     
+                    </select>
                   </div>
                 </div>
               </div>
