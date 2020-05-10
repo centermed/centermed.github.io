@@ -285,7 +285,7 @@ $arrayOfids = mysqli_fetch_array($res_ids);
                   
                   
                   <select name = "Time_Priema">
-                    <option value="1"> чета </option>
+                    <option value="1.05.20"> 1.05.20 </option>
                     </select>
                     
                     
