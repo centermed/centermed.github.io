@@ -6,6 +6,9 @@
     border-top: 1px solid #000;
     border-bottom: none;
 }
+a.heading{
+    text-decoration: none;
+}
 .crawl{
 	border-top: 1px solid #000;
 }
