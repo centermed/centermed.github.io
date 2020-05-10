@@ -20,10 +20,24 @@
   	if(count%2==0) document.getElementById("logomed").src='media/cm2.svg';
   	else document.getElementById("logomed").src='media/cm1.svg';
  }
- function setButton(a){
-   document.getElementById("time").placeholder=a;
-   document.getElementById("direction").placeholder=document.getElementById("speciality").getAttribute('value');
-   document.getElementById("doctor").placeholder=document.getElementById("nameofdoctor").textContent;
+ function setOption(){
+  selected=document.getElementById("service_options").selectedIndex;
+  document.getElementById('costs').placeholder=uslugi[selected*3+2];
+
+ }
+ function setButton(a,id_count){
+   document.getElementById("speciality").placeholder=mydata[id_count*5+4];
+   a=document.getElementById("service_options");
+   uslugi=data_usluga.split(';').join("^").split('^');
+   options=0;
+   for(var x=0;x<uslugi.length/3-1;x++){
+    if(mydata[id_count*5+4]==uslugi[x*3]){
+      a.options[options]=new Option(uslugi[x*3+1],"str"+options);
+      a.options[options].selected=setOption(x);
+      options++;
+    }
+   }
+   document.getElementById("doctor_name").placeholder=mydata[id_count*5+1];
 }
 function setDate(button_id,id){
   k=1;

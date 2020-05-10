@@ -15,7 +15,8 @@
     <title>Онлайн-запись</title>
   </head>
   <body>
-     <script type="text/javascript" id="json" src="DATA.txt" ></script>
+     <script type="text/javascript" id="json" src="DATA_Services.txt" ></script>
+     <script type="text/javascript" src="DATA.txt" ></script>
      <script type="text/javascript" src="script.js"></script>
      
     <!-- Optional JavaScript -->
@@ -229,19 +230,16 @@
                     <label for="doctor">Врач</label>
                   </div>
                   <div class = "col">
-                    <input type="text" class="form-control" name="doctor" placeholder="Доктор Геннадий Иванович" readonly>
+                    <input type="text" id="doctor_name" class="form-control" name="doctor" placeholder="Доктор Геннадий Иванович" readonly>
                   </div>
                 </div>
               <div class= "row">
                   <div class="col padd_r">
-                    <input type="text" class="form-control" name="direction" placeholder="Психиатрия-наркология" readonly>
+                    <input type="text" id="speciality" class="form-control" name="direction" placeholder="Психиатрия-наркология" readonly>
                   </div>
                   <div class="col padd_l">
-                    <select name = "Usluga" class="form-control">
-                      <option value = "1">Услуга 1</option>
-                      <option value= "2">Услуга 2</option>
-                      <option value="3">Услуга 3</option>
-                      <option value="4">Услуга 4</option>      
+                    <select name = "Usluga" onChange="setOption()" id="service_options" class="form-control">
+                      <option value = "1">Услуга 1</option>   
                     </select>
                   </div>
                 </div>
@@ -269,7 +267,7 @@
                     <label for="price">Цена</label>
                   </div>
                   <div class = "col-3">
-                    <input type="text" class="form-control" name="price" placeholder="2100 &#8381" readonly>
+                    <input type="text" id='costs' class="form-control" name="price" placeholder="2100 &#8381" readonly>
                   </div>
               </div>
             </div>
