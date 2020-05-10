@@ -131,15 +131,15 @@
     </div>
     <script> 
       
-      mydata=data_vrachi.split(';').join(",").split(',');
-      for(var i=0;i<mydata.length/4-1;i++){
-      name=mydata[i*4+0];
-      speciality=mydata[i*4+3];
-      work_age=mydata[i*4+1];
+      mydata=data_vrachi.split(';').join("^").split('^');
+      for(var i=0;i<mydata.length/5-1;i++){
+      name=mydata[i*5+1];
+      speciality=mydata[i*5+4];
+      work_age=mydata[i*5+2];
       if(work_age%10>=5 || work_age%10==0 || (work_age>10 && work_age<20)) work_age+=" лет"
         else if(work_age%10==1) work_age+=" год"
           else work_age += " года"
-      university=mydata[i*4+2];
+      university=mydata[i*5+3];
       if(university=="0") university=" ";
       cost="бесценно";
       source="media/photo.png";
