@@ -272,7 +272,8 @@ $arrayOfids = mysqli_fetch_array($res_ids);
                   <div class="col">
                       <select name = "Usluga">
           
-  			 <option value="1" > чета</option>		
+  			 <option value="1" > Услуга 1</option>
+  			 <option value="2" > Услуга 2</option>	
 			</select>
                   </div>
                 </div>
@@ -285,14 +286,16 @@ $arrayOfids = mysqli_fetch_array($res_ids);
                   
                   
                   <select name = "Time_Priema">
-                    <option value="1.05.20"> 1.05.20 </option>
+                    <option value="9:00-9:30"> 9:00-9:30 </option>
+                    <option value="9:40-10:10"> 9:40-10:10 </option>
                     </select>
                     
                     
                   </div>
                   <div class="col">
                     <select name = "Date_Priema">
-                    <option value="1"> чета </option>
+                    <option value="2.05.20"> 2.05.20 </option>
+                    <option value="1.05.20"> 1.05.20 </option>
                     </select>
                   </div>
                 </div>

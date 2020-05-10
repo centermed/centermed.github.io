@@ -23,6 +23,15 @@ $res_ids = mysqli_query($link, $query);
 
 $arrayOfids = mysqli_fetch_array($res_ids);
 
+for($p=1; $p<=32; $p++){
+ $index = 'vrem'.$p;
+if($arrayOfids[$index]=="")
+{
+    $arrayOfids[$index] = "0";
+}
+ 
+}
+
 $id_vrach = $arrayOfids['idvrach'];
 $Date = $arrayOfids['Data'];
 $Time1 = $arrayOfids['vrem1'];

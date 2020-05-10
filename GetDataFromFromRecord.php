@@ -54,12 +54,12 @@
 	}
 	
    
-	$query = "SELECT `Data`, `vrem1`, `vrem2`, `vrem3`, `vrem4`, `vrem5`, 
+	$query = "SELECT `vrem1`, `vrem2`, `vrem3`, `vrem4`, `vrem5`, 
 	`vrem6`, `vrem7`, `vrem8`, `vrem9`, `vrem10`, `vrem11`, 
 	`vrem12`, `vrem13`, `vrem14`, `vrem15`, `vrem16`, `vrem17`,
 	 `vrem18`, `vrem19`, `vrem20`, `vrem21`, `vrem22`, `vrem23`, 
 	 `vrem24`, `vrem25`, `vrem26`, `vrem27`, `vrem28`, `vrem29`, 
-	 `vrem30`, `vrem31`, `vrem32` FROM `svobodnoevremya`";
+	 `vrem30`, `vrem31`, `vrem32` FROM `svobodnoevremya` WHERE Data = '$form_Zapic_date'";
 	
 	$result_bd = mysqli_query($link, $query);
     $ArraOfTime = mysqli_fetch_array($result_bd);
