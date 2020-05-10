@@ -15,7 +15,7 @@
     <title>Онлайн-запись</title>
   </head>
   <body>
-     <script type="text/javascript" src="data.json"></script>
+     <script type="text/javascript" id="json" src="DATA.txt" ></script>
      <script type="text/javascript" src="script.js"></script>
      
     <!-- Optional JavaScript -->
@@ -180,15 +180,16 @@
       </div>
     </div>
     <script> 
-       var mydata = JSON.parse(data);
-       for(var i=0;i<mydata.length;i++){
-      name=mydata[i].ФИО;
-      speciality=mydata[i].Специализация;
-      work_age=mydata[i].Стаж;
+      
+      mydata=data_vrachi.split(';').join(",").split(',');
+      for(var i=0;i<mydata.length/4;i++){
+      name=mydata[i*4+0];
+      speciality=mydata[i*4+3];
+      work_age=mydata[i*4+1];
       if(work_age%10>=5 || work_age%10==0 || (work_age>10 && work_age<20)) work_age+=" лет"
         else if(work_age%10==1) work_age+=" год"
           else work_age += " года"
-      university=mydata[i].Регалия;
+      university=mydata[i*4+2];
       if(university=="0") university=" ";
       cost="бесценно";
       source="media/photo.png";
@@ -235,7 +236,9 @@
       </div>\
     </div>'
     document.write(s);
-  }</script>
+  }
+  //}
+</script>
     <!-- Button trigger modal
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
       Запустить модальное окно
