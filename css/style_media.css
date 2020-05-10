@@ -13,13 +13,13 @@
     height: 30px;
   }
   .info{
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .hier{
     font-size: 0.9em;
   }
   .sl-max{
-    height: 265px;
+    height: 100%;
   }
   .slider__control {
     top: 70%;
@@ -52,13 +52,13 @@
     height: 30px;
   }
   .info{
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .hier{
     font-size: 0.9em;
   }
   .sl-max{
-    height: 289px;
+    height: 100%;
   }
   .slider__control {
     top: 70%;
@@ -91,13 +91,13 @@
     height: 30px;
   }
   .info{
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .hier{
     font-size: 0.9em;
   }
   .sl-max{
-    height: 310px;
+   height: 100%;
   }
   .slider__control {
     top: 70%;
@@ -130,13 +130,13 @@
     height: 30px;
   }
   .info{
-    margin-top: 60px;
+    margin-top: -30px;
   }
   .hier{
     font-size: 0.9em;
   }
   .sl-max{
-    height: 451px;
+    height: 100%;
   }
   .slider__control {
     top: 60%;
@@ -168,13 +168,13 @@
     height: 80px;
 }
   .info{
-    margin-top: 60px;
+    margin-top: -20px;
   }
   .hier{
     font-size: 1.2em;
   }
   .sl-max{
-    height: 557px;
+    height: 100%;
   }
   .slider__control {
     top: 60%;
@@ -184,7 +184,7 @@
   }
   .text-slider{
     top: 46%;
-    left: 16%;
+    left: 10%;
     width: 520px;
     font-size: 2.5em;
     line-height: 1.2em;
@@ -194,5 +194,8 @@
 @media (min-width: 1030px) {
     .sl-max{
     height: 692px;
+  }
+  .info{
+    margin-top: -20px;
   }
 }
