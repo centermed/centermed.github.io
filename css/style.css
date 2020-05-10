@@ -99,7 +99,7 @@ a:hover{
   width: 100%;
   bottom:0;
   height: 700px;
-  background: linear-gradient(to top,rgba(0,0,0,.4),rgba(0,0,0,0) 75%);
+  background: linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,0) 75%);
   pointer-events: none;
   content: "";
 }

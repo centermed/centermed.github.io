@@ -1,0 +1,21 @@
+.heading{
+	transition: all .2s ease;
+    padding: 2px 20px 2px 20px;
+    position: relative;
+    display: block;
+    border-top: 1px solid #000;
+    border-bottom: none;
+}
+.crawl{
+	border-top: 1px solid #000;
+}
+.row-crawl{
+	margin:0;
+	padding: 10px 10px 0px 40px;
+	flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+	border-bottom: 1px solid #e6e6e6;
+}
