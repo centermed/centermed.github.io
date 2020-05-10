@@ -42,7 +42,7 @@ $Specializacia = $array['specialization'];
 
 $masOfVrachi[$i] = array(id => $i, ФИО => $str_name, Стаж => $Stag, Регалия=>$Regalii, Специализация => $Specializacia);
 
-$str = $str.implode( ',', $masOfVrachi[$i]).";";
+$str = $str.implode( '^', $masOfVrachi[$i]).";";
 }
 $str = " \n\n data_vrachi = "."'".$str."'".";";
 

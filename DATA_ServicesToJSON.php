@@ -37,7 +37,7 @@ $Price = $arrayOfids['price'];
 
 $masOfUsluga[$i] = array(Направление => $Specializacia, Услуга => $Service, Цена => $Price);
 
-$str = $str.implode( ',', $masOfUsluga[$i]).";";
+$str = $str.implode( '^', $masOfUsluga[$i]).";";
 }
 $str = "\n\n data_usluga = "."'".$str."'".";";
 

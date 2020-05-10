@@ -15,9 +15,7 @@ $arrayOfids = mysqli_fetch_array($res_ids);
 
 $countids = $arrayOfids[0];
 
-$file = file_get_contents('DATA_Vrach_Time.json');
-$arrayOfTime = json_decode($file,TRUE);
- 
+
 for($i=0; $i<$countids; $i++){
 $query = "SELECT * FROM `svobodnoevremya` WHERE id = $i";
 
@@ -73,7 +71,7 @@ $masOfTime[$i] = array(id_Врача => $id_vrach, Дата => $Date, Время
 Время31 => $Time1,Время31 => $Time1,Время32 => $Time32);
 
 
-$str = $str.implode( ',', $masOfTime[$i]).";";
+$str = $str.implode( '^', $masOfTime[$i]).";";
 }
 $str = "\n\n data_time_svobod = "."'".$str."'".";";
 
