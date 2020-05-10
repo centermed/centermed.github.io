@@ -52,3 +52,8 @@ function colorchange(button_id){
   document.getElementById(button_id).style.backgroundColor="#2D8FD8";
 }
 }
+function setService(id){
+  a=document.getElementById("service"+id);
+  if (a.style.display ==  "block") a.style.display = "none";
+  else a.style.display = "block";
+}

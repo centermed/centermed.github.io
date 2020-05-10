@@ -18,6 +18,7 @@
 </head>
 <body>
 <script src="script.js"></script>
+<script src="Data_Services.txt"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -96,104 +97,35 @@
             <h2 align="left"><b>Услуги</b></h2>
         </div>
     </div>
-    <div class = "row">
-        <div class = "col-8 offset-2" align="justify">
-            <a class = "heading"><h2>&#x25BC Диагностика</h2></a>
-            <div class = "crawl" style="display: block">
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
+<script>
+    mydata=data_usluga.split(';').join("^").split('^');
+    var d="false";
+    for(var i=0;i<mydata.length/3-1;i++){
+            if(i==0 || d=="true"){
+                if (d=="true") {document.write('</div>\
+</div>')}
+                s='<div class = "col-8 offset-2" align="justify">\
+            <a class = "heading" href="javascript:setService('+i+')"><h2>&#x25BC '+mydata[i*3+0]+'</h2>\
+            </a>\
+            <div class = "crawl"  id="service'+i+'" style="display: none">';
+            document.write(s);
 
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
-
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
-            </div>
-
-            <a class = "heading"><h2>&#x25BC Диагностика</h2></a>
-            <div class = "crawl" style="display: none">
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
-
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
-
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
-            </div>
-
-            <a class = "heading"><h2>&#x25BC Диагностика</h2></a>
-            <div class = "crawl" style="display: block">
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
-
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
-
-                <div class = "row row-crawl">
-                    <div class = "col-10 info-crawl">
-                        <p>Комплексная диагностика зрения</p>
-                    </div>
-                    <div class = "col-2 price-crawl">
-                        <p>2000 &#8381</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</div>
-
-
+            }
+            if(mydata[i*3] != mydata[i*3+3]) d="true";
+            else d="false";
+          s='<div class = "row row-crawl">\
+                    <div class = "col-10 info-crawl">\
+                        <p>'+mydata[i*3+1]+'</p>\
+                    </div>\
+                    <div class = "col-2 price-crawl">\
+                        <p>'+mydata[i*3+2]+' &#8381</p>\
+                    </div>\
+                </div>';
+                document.write(s);
+        }
+    document.write('</div>\
+</div>');
+</script>
 <footer class = "container">
     <div class = "row">
         <div class = "sosials col-3 offset-1" align = left>
