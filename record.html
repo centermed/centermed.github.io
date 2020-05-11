@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/style_media.css" type="text/css">
 
     <link rel="shortcut icon" href="media/logo.svg" type="image/png">
 
@@ -27,34 +26,35 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <div class = "hier container-fluid">
       <div class = "row">
-        <div class = "logo col-md-2 offset-md-1 col-sm-12">
+        <div class = "logo col-2 offset-1">
           <b><a href="index.html">ЦЕНТРМЕД</a></b></div>
-        <div class = "call col-md-4 offset-md-1 col-sm-6" align="center">
-          <a href = "#" data-toggle="modal" data-target="#exampleModalCenter2">
-            <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> &#8635 Заказать обратный звонок</a>
+        <div class = "call col-4 offset-1" align="center">
+          <a href="#" data-toggle="modal" data-target="#exampleModalCenter2">
+            <img src = "media/icon.png" width="16px">
+            Заказать обратный звонок</a>
         </div>
-        <div class = "col-md-2 offset-md-1 col-sm-6">
+        <div class = "col-2 offset-1">
           <a href="record.html">
           <button class = 'record' href = "record.html"><b>Онлайн-запись</b></button>
         </div>
       </div>
       <div class = "row">
-        <div class = "col-md-2 offset-md-1 col-sm-3" align="center">
+        <div class = "col-2 offset-1" align="center">
           <a href="clinic.html"><b>Клиника</b></a>
         </div>
-        <div class = "col-md-2 col-sm-3"align="center">
+        <div class = "col-2" align="center">
           <a href="services.html"><b>Услуги</b></a>
         </div>
-        <div class = "col-md-2 col-sm-3" align="center">
+        <div class = "col-2" align="center">
           <a href="prices.html"><b>Цены</b></a>
           </div>
         <!--<div class = "col-2" align="center">
           <a href="doctors.html"><b>Врачи</b></a>
         </div>-->
-        <div class = "col-md-2 col-sm-3" align="center">
+        <div class = "col-2" align="center">
           <a href="contacts.html"><b>Контакты</b></a>
         </div>
-        <div class = "col-md-2 col-sm-3" align="center">
+        <div class = "col-2" align="center">
           <a href="to_patients.html"><b>Пациентам</b></a>
           </div>
       </div>
@@ -111,28 +111,28 @@
 
     <div class = "hier-record after-menu container">
       <div class = "row">
-        <div class = "col-md-1 col-sm-6">
+        <div class = "col-1">
           <img src = "media/location.png">
         </div>
-        <div class = "col-md-3 col-sm-6">
+        <div class = "col-3">
           <b>Вызов врача на дом</b>
           <p>Выберите врача и укажите адрес</p>
         </div>
         
-        <div class = "col-md-1 col-sm-6">
+        <div class = "col-1">
           <img src = "media/money.png">
         </div>
-        <div class = "col-md-3 col-sm-6">
+        <div class = "col-3">
           <b>Честная цена без комиссии</b>
           <p>Цена приема будет как в 
           клинике или ниже, оплата 
           производится на месте</p>
         </div>
         
-        <div class = "col-md-1 col-sm-6">
+        <div class = "col-1">
           <img src = "media/doctor.png">
         </div>
-        <div class = "col-md-3 col-sm-6">
+        <div class = "col-3">
           <b>Моментальная онлайн-запись к врачу</b>
           <p>Без звонка в клинику с 
           помощью актуального 
@@ -166,19 +166,19 @@
       source="media/photo.png";
       s='<div class = "container">\
       <div class = "row">\
-        <div class = "doctor col-md-10 offset-md-1 col-sm-12" align="center">\
+        <div class = "doctor col-10 offset-1" align="center">\
           <div class = "container-fluid">\
             <div class = "row">\
-              <div class = "photo col-md-2 col-sm-6">\
+              <div class = "photo col-2">\
                 <img src ='+source+'>\
               </div>\
-              <div class = "text-doctor col-md-5 col-sm-6" align = left>\
+              <div class = "text-doctor col-5" align = left>\
                 <p id="speciality'+i+'" value="Терапевт">'+speciality+'</p>\
                 <h2><b id="nameofdoctor'+i+'">'+name+'</b></h2>\
                 <p> Стаж '+work_age+'</p>\
                 <p>'+university+'</p>\
                 </div>\
-              <div class = "record-panel col-md-5 col-sm-12">\
+              <div class = "record-panel col-5">\
                 <p>Выберите время приема для записи онлайн</p>\
                 <div class = \'button-panel\'>\
                   <button id=\'left'+i+'\' class = \'left\' onmouseover="colorchange(\'left\','+i+')" onclick="setDate(\'left\','+i+')">Среда,11</button>\
@@ -254,17 +254,15 @@
                   </div>
                 </div>
               <div class= "row">
-                  <div class="col">
+                  <div class="col padd_r">
                     <input type="text" id="speciality" class="form-control" name="direction" placeholder="Психиатрия-наркология" readonly>
                   </div>
-              </div>
-              <div class= "row">
-                  <div class="col">
+                  <div class="col padd_l">
                     <select name = "Usluga" onChange="setOption()" id="service_options" class="form-control">
                       <option value = "1">Услуга 1</option>   
                     </select>
                   </div>
-              </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="datetime">Время приема</label>
@@ -324,8 +322,8 @@
 
     <footer class = "container">
       <div class = "row">
-        <div class = "sosials col-md-3 offset-md-1" align = left>
-          <img onclick="img_click()" onmouseenter="img_enter()" onmouseleave="img_leave()" id="logomed" src = 'media/cmg.svg' width="70%" class = 'logobot'>
+        <div class = "sosials col-3 offset-1" align = left>
+         <img onclick="img_click()" onmouseenter="img_enter()" onmouseleave="img_leave()" id="logomed" src = 'media/cmg.svg' width="70%" class = 'logobot'>
           <div class = "icon">
             <a href="#">
               <img src = "media/vk.png" width="20%">
@@ -338,7 +336,7 @@
             </a>
           </div>
         </div>
-        <div class = "col-md-2 col-sm-4">
+        <div class = "col-2">
           <ul>
             <li><a href="to_patients.html"><b>Пациентам</b></a></li>
             <li><a href="questions.html">Вопросы и ответы</a></li>
@@ -346,7 +344,7 @@
             <li><a href="directory.html">Справочник пациента</a></li>
           </ul>
         </div>
-        <div class = "col-md-2 col-sm-4">
+        <div class = "col-2">
           <ul>
             <li><a href="clinic.html"><b>Клиника</b></a></li>
             <li><a href="news.html">Новости</a></li>
@@ -354,7 +352,7 @@
             <li><a href="prices.html">Цены</a></li>
           </ul>
         </div>
-        <div class = "col-md-3 col-sm-4">
+        <div class = "col-3">
           <ul>
             <li><a href="contacts.html"><b>Контакты</b></a></li>
             <li>Москва, м. ВДНХ, 
@@ -364,6 +362,6 @@
           </ul>
         </div>
       </div>
-    </footer>
- </body>
+  </footer>
+  <body>
 </html>
