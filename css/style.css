@@ -219,8 +219,7 @@ a:hover{
   margin-top:20px;
   min-height: 300px;
   background-color:#DBE9EB;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  border-radius: 30px;
 }
 
 
@@ -359,9 +358,7 @@ a:hover{
 .form-group label{
   font-size: 0.98em;
 }
-.padd_r{
-  padding-right:0;
-}
-.padd_l{
-  padding-left:0;
+.blocked{
+  background: #808080;
+  opacity: 1;
 }

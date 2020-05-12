@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style_media.css" type="text/css">
 
     <link rel="shortcut icon" href="media/logo.svg" type="image/png">
 
     <title>Онлайн-запись</title>
   </head>
   <body>
-     <script type="text/javascript" id="json" src="DATA.txt" ></script>
+
+     <script type="text/javascript" id="json" src="DATA_Services.txt" ></script>
+     <script type="text/javascript" src="Data_Vrachi_Time.txt"></script>
+
+     <script type="text/javascript" id="json" src="Data_Services.txt" ></script>
+
+     <script type="text/javascript" src="DATA.txt" ></script>
      <script type="text/javascript" src="script.js"></script>
      
     <!-- Optional JavaScript -->
@@ -25,37 +32,35 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <div class = "hier container-fluid">
       <div class = "row">
-        <div class = "logo col-2 offset-1">
+        <div class = "logo col-md-2 offset-md-1 col-sm-12">
           <b><a href="index.html">ЦЕНТРМЕД</a></b></div>
-        <div class = "call col-4 offset-1" align="center">
-          <a href="#" data-toggle="modal" data-target="#exampleModalCenter2">
-            <img src = "media/icon.png" width="16px">
-            Заказать обратный звонок</a>
+        <div class = "call col-md-4 offset-md-1 col-sm-6" align="center">
+          <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> &#8635 Заказать обратный звонок</a>
         </div>
-        <div class = "col-2 offset-1">
+        <div class = "col-md-2 offset-md-1 col-sm-6">
           <a href="record.html">
-          <button class = 'record' href = "record.html"><b>Онлайн-запись</b></button>
+          <button class = 'record' href = "record.html"><b>Онлайн-запись</b></button></a>
         </div>
       </div>
       <div class = "row">
-        <div class = "col-2 offset-1" align="center">
+        <div class = "col-md-2 offset-md-1 col-sm-3" align="center">
           <a href="clinic.html"><b>Клиника</b></a>
         </div>
-        <div class = "col-2" align="center">
+        <div class = "col-md-2 col-sm-3"align="center">
           <a href="services.html"><b>Услуги</b></a>
         </div>
-        <div class = "col-2" align="center">
-          <a href="prices.html"><b>Цены</b></a>
-          </div>
+        <div class = "col-md-2 col-sm-3" align="center">
+          <a href="stocks.html"><b>Акции</b></a>
+        </div>
         <!--<div class = "col-2" align="center">
           <a href="doctors.html"><b>Врачи</b></a>
         </div>-->
-        <div class = "col-2" align="center">
+        <div class = "col-md-2 col-sm-3" align="center">
           <a href="contacts.html"><b>Контакты</b></a>
         </div>
-        <div class = "col-2" align="center">
+        <div class = "col-md-2 col-sm-3" align="center">
           <a href="to_patients.html"><b>Пациентам</b></a>
-          </div>
+        </div>
       </div>
     </div>
 
@@ -78,116 +83,146 @@
                 <label for="number">Номер телефона</label>
                 <input type="phone" class="form-control" id="number" placeholder="+7(922)1212120">
               </div>
+               <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#call-form-answers" data-dismiss="modal">Отправить</button>
+            </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="call-form-answers" tabindex="-1" role="dialog" aria-labelledby="nametitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Ожидайте звонка</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="name">Ваша заявка принята! Администратор в ближайшее время свяжется с вами.</label>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+
     <div class = "hier-record after-menu container">
       <div class = "row">
-        <div class = "col-1">
+        <div class = "col-md-1 col-sm-6">
           <img src = "media/location.png">
         </div>
-        <div class = "col-3">
+        <div class = "col-md-3 col-sm-6">
           <b>Вызов врача на дом</b>
           <p>Выберите врача и укажите адрес</p>
         </div>
         
-        <div class = "col-1">
+        <div class = "col-md-1 col-sm-6">
           <img src = "media/money.png">
         </div>
-        <div class = "col-3">
+        <div class = "col-md-3 col-sm-6">
           <b>Честная цена без комиссии</b>
           <p>Цена приема будет как в 
           клинике или ниже, оплата 
           производится на месте</p>
         </div>
         
-        <div class = "col-1">
+        <div class = "col-md-1 col-sm-6">
           <img src = "media/doctor.png">
         </div>
-        <div class = "col-3">
+        <div class = "col-md-3 col-sm-6">
           <b>Моментальная онлайн-запись к врачу</b>
           <p>Без звонка в клинику с 
           помощью актуального 
           расписания</p>
         </div>
-        
       </div>
     </div>
 
     <div class = "container">
       <div class = "row">
-        <div class = "col-8 offset-2" align="center">
+        <div class = "heading-record col-md-8 offset-md-2 col-sm-12" align="center">
           <h2><b>Запишитесь на прием к врачу онлайн</b></h2>
         </div>
         </div>
       </div>
     </div>
     <script> 
-      
+
       mydata=data_vrachi.split(';').join("^").split('^');
-      for(var i=0;i<mydata.length/5-1;i++){
+      data_time=data_time_svobod.split(';').join("^").split('^');
+      for(var i=0;i<mydata.length/5 - 1;i++){
       name=mydata[i*5+1];
       speciality=mydata[i*5+4];
       work_age=mydata[i*5+2];
-      if(work_age%10>=5 || work_age%10==0 || (work_age>10 && work_age<20)) work_age+=" лет"
-        else if(work_age%10==1) work_age+=" год"
-          else work_age += " года"
+      if(work_age%10>=5 || work_age%10==0 || (work_age>10 && work_age<20)) work_age+=" лет";
+        else if(work_age%10==1) work_age+=" год";
+          else work_age += " года";
       university=mydata[i*5+3];
       if(university=="0") university=" ";
       cost="бесценно";
-      source="media/photo.png";
+      source="media/doctors/"+Number(i+1)+".jpg";   
+                  now=new Date();
+                  dates=now.getDate();
+                  hours=now.getHours();
+                  minutes=now.getMinutes();
+                  if(hours>20) dates++;
       s='<div class = "container">\
       <div class = "row">\
-        <div class = "doctor col-10 offset-1" align="center">\
+        <div class = "doctor col-md-10 offset-md-1 col-sm-12" align="center">\
           <div class = "container-fluid">\
             <div class = "row">\
-              <div class = "photo col-2">\
+             <div class = "photo col-md-2 col-sm-6">\
                 <img src ='+source+'>\
               </div>\
-              <div class = "text-doctor col-5" align = left>\
+               <div class = "text-doctor col-md-5 col-sm-6" align = left>\
                 <p id="speciality'+i+'" value="Терапевт">'+speciality+'</p>\
                 <h2><b id="nameofdoctor'+i+'">'+name+'</b></h2>\
                 <p> Стаж '+work_age+'</p>\
                 <p>'+university+'</p>\
                 </div>\
-              <div class = "record-panel col-5">\
+              <div class = "record-panel col-md-5 col-sm-12">\
                 <p>Выберите время приема для записи онлайн</p>\
                 <div class = \'button-panel\'>\
-                  <button id=\'left'+i+'\' class = \'left\' onmouseover="colorchange(\'left\','+i+')" onclick="setDate(\'left\','+i+')">Среда,11</button>\
-                  <button id=\'center'+i+'\' class = \'center\' onmouseover="colorchange(\'center\','+i+')" onclick="setDate(\'center\','+i+')">Четверг,12</button>\
-                  <button id=\'right'+i+'\' class = \'right\' onmouseover="colorchange(\'right\','+i+')" onclick="setDate(\'right\','+i+')">Пятница,13</button>\
+                  <button id=\'left'+i+'\' class = \'left\' onmouseover="colorchange(\'left\','+i+')" onclick="setDate(\'left\','+i+')">'+dates+' мая</button>\
+                  <button id=\'center'+i+'\' class = \'center\' onmouseover="colorchange(\'center\','+i+')" onclick="setDate(\'center\','+i+')">'+Number(dates+1)+' мая</button>\
+                  <button id=\'right'+i+'\' class = \'right\' onmouseover="colorchange(\'right\','+i+')" onclick="setDate(\'right\','+i+')">'+Number(dates+2)+' мая</button>\
                 </div>\
-                <div class = \'time-panel\' onclick=>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:00\','+i+')">13:00</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:30\','+i+')">13:30</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'13:50\','+i+')">13:50</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:10\','+i+')">14:10</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:30\','+i+')">14:30</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'14:50\','+i+')">14:50</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:10\','+i+')">15:10</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:30\','+i+')">15:30</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'15:50\','+i+')">15:50</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:10\','+i+')">16:10</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:30\','+i+')">16:30</button>\
-                  <button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\'16:50\','+i+')">16:50</button>\
-                </div>\
+                <div class = \'time-panel\' onclick=>';
+                  dates+=".05.2020";
+                  var index_1=data_time.findIndex(function(item, index, array){
+                    if(data_time[index]==i && data_time[index+1]==dates) {return true;}
+                    else {return false;}
+                  });
+                  x_counter=0;
+                  for(var x=3;x<19;x++){
+                  if(data_time[index_1+x]!=0){
+                    button_time=data_time[index_1+x].split('-');
+                    test_time=button_time[0].split(':');
+                    if(test_time[0]<hours || (test_time[0]==hours && test_time[1]<minutes)) {
+                      disabled="style='background-color: #a0a0a0; color:white'"+"disabled";}
+                    else disabled="";
+                    s+='<button data-toggle="modal" id="button'+i+x_counter+'" data-target="#exampleModalCenter" onclick="setButton(\''+data_time[index_1+x]+'\','+i+')"'+disabled+'>'+button_time[0]+'</button>';
+                    x_counter++;
+                   }
+                }
+                s+='</div>\
                 <p class = \'number\'>Телефон для записи: 8(499)519-37-05</p>\
               </div>\
             </div>\
           </div>\
         </div>\
       </div>\
-    </div>'
+    </div>';
     document.write(s);
+    setDate('left',i);
   }
-  //}
 </script>
     <!-- Button trigger modal
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -229,34 +264,32 @@
                     <label for="doctor">Врач</label>
                   </div>
                   <div class = "col">
-                    <input type="text" class="form-control" name="doctor" placeholder="Доктор Геннадий Иванович" readonly>
+                    <input type="text" id="doctor_name" class="form-control" name="doctor" placeholder="Доктор Геннадий Иванович" readonly>
                   </div>
                 </div>
               <div class= "row">
                   <div class="col padd_r">
-                    <input type="text" class="form-control" name="direction" placeholder="Психиатрия-наркология" readonly>
+                    <input type="text" id="speciality" class="form-control" name="direction" placeholder="Психиатрия-наркология" readonly>
                   </div>
                   <div class="col padd_l">
-                    <select name = "Usluga" class="form-control">
-                      <option value = "1">Услуга 1</option>
-                      <option value= "2">Услуга 2</option>
-                      <option value="3">Услуга 3</option>
-                      <option value="4">Услуга 4</option>      
+                    <select name = "Usluga" onChange="setOption()" id="service_options" class="form-control">
+                      <option value = "1">Услуга 1</option>   
                     </select>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="datetime">Время приема</label>
+                <input type="text" id="doctors_id" hidden>
                 <div class= "row">
                   <div class="col">
-                    <select name = "Date_Priema" class="form-control">
+                    <select name = "Date_Priema" id="date_priem" value="0" class="form-control">
                       <option value="1.05.20"> 1.05.20</option>
                       <option value="2.05.20"> 2.05.20 </option> 
                     </select>
                   </div>
                   <div class="col">
-                    <select name = "Time_Priema" class="form-control">
+                    <select name = "Time_Priema" id="time_priema" class="form-control">
                       <option value="9:00-9:30">9:00-9:30 </option>
                       <option value="9:40-10:10">9:40-10:10 </option>        
                     </select>
@@ -269,23 +302,43 @@
                     <label for="price">Цена</label>
                   </div>
                   <div class = "col-3">
-                    <input type="text" class="form-control" name="price" placeholder="2100 &#8381" readonly>
+                    <input type="text" id='costs' class="form-control" name="price" placeholder="2100 &#8381" readonly>
                   </div>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-              <button name = "submit" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
+              <button name = "submit" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#record-answers" data-dismiss="modal">Отправить</button>
             </div>
           </form>
           </div>
         </div>
       </div>
     </div>
-  <footer class = "container">
+
+    <div class="modal fade" id="record-answers" tabindex="-1" role="dialog" aria-labelledby="nametitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Онлайн-запись</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="name">Вы записаны на прием! Подробную информацию о записи мы отправили вам в СМС.</label>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class = "container">
       <div class = "row">
-        <div class = "sosials col-3 offset-1" align = left>
-         <img onclick="img_click()" onmouseenter="img_enter()" onmouseleave="img_leave()" id="logomed" src = 'media/cmg.svg' width="70%" class = 'logobot'>
+        <div class = "sosials col-md-3 offset-md-1" align = left>
+          <img onclick="img_click()" onmouseenter="img_enter()" onmouseleave="img_leave()" id="logomed" src = 'media/cmg.svg' width="70%" class = 'logobot'>
           <div class = "icon">
             <a href="#">
               <img src = "media/vk.png" width="20%">
@@ -298,7 +351,7 @@
             </a>
           </div>
         </div>
-        <div class = "col-2">
+        <div class = "col-md-2 col-sm-4">
           <ul>
             <li><a href="to_patients.html"><b>Пациентам</b></a></li>
             <li><a href="questions.html">Вопросы и ответы</a></li>
@@ -306,15 +359,15 @@
             <li><a href="directory.html">Справочник пациента</a></li>
           </ul>
         </div>
-        <div class = "col-2">
+        <div class = "col-md-2 col-sm-4">
           <ul>
             <li><a href="clinic.html"><b>Клиника</b></a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="stocks.html">Акции</a></li>
-            <li><a href="prices.html">Цены</a></li>
+            <li><a href="services.html">Цены</a></li>
           </ul>
         </div>
-        <div class = "col-3">
+        <div class = "col-md-3 col-sm-4">
           <ul>
             <li><a href="contacts.html"><b>Контакты</b></a></li>
             <li>Москва, м. ВДНХ, 
@@ -324,6 +377,6 @@
           </ul>
         </div>
       </div>
-  </footer>
-  <body>
+    </footer>
+ </body>
 </html>

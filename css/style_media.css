@@ -228,4 +228,35 @@
   .info{
     margin-top: -1px;
   }
+  .heading h2{
+    font-size: 1.8rem;
+}
+@media (min-width: 1030px) {
+  .sl-max{
+    height: 105.5vh;
+  }
+  .info{
+    margin-top: -1px;
+  }
+  .heading h2{
+    font-size: 1.8rem;
+}
+
+@media (max-width: 320px) {
+  .hier-record{
+    margin-top: 90px;
+  }
+  .heading-record h2{
+    font-size: 1em;
+  }
+}
+@media (max-width: 375px) {
+  .hier-record{
+    margin-top: 90px;
+  }
+}
+@media (max-width: 425px) {
+  .hier-record{
+    margin-top: 90px;
+  }
 }
