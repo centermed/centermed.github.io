@@ -204,7 +204,8 @@
                   if(data_time[index_1+x]!=0){
                     button_time=data_time[index_1+x].split('-');
                     test_time=button_time[0].split(':');
-                    if(test_time[0]<hours || (test_time[0]==hours && test_time[1]<minutes)) disabled="disabled";
+                    if(test_time[0]<hours || (test_time[0]==hours && test_time[1]<minutes)) {
+                      disabled="style='background-color: #a0a0a0; color:white'"+"disabled";}
                     else disabled="";
                     s+='<button data-toggle="modal" id="button'+i+x_counter+'" data-target="#exampleModalCenter" onclick="setButton(\''+data_time[index_1+x]+'\','+i+')"'+disabled+'>'+button_time[0]+'</button>';
                     x_counter++;

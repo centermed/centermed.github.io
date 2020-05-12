@@ -77,15 +77,25 @@ function setDate(button_id,id){
 	document.getElementById(button_id+id).style.color="#F8F8FF";
 	document.getElementById(button_id+id).style.backgroundColor="#2D8FD8";
   if (button_id=="left" && dates==date) {
-    for (var x=0;x<=15;x++){
+    for (var x=0;x<15;x++){
       this_button=document.getElementById("button"+id+x);
       button_time=this_button.innerHTML.split(":");
-      if(button_time[0]<hours || (button_time[0]==hours && button_time[1]<minutes)) this_button.disabled=true;
+      if(button_time[0]<hours || (button_time[0]==hours && button_time[1]<minutes)) {
+        this_button.disabled=true;
+        this_button.style='background-color: #a0a0a0; color:white';
+      }
     }
   }
+  if(button_id!='left'){
 	if(button_id=="center") date++;
 	if(button_id=="right") date+=2;
 	 document.getElementById("date_priem").value=date+".05.2020"
+   for (var x=0;x<15;x++){
+    this_button=document.getElementById("button"+id+x);
+    this_button.disabled=false;
+    this_button.style='background-color: #F8F8FF; color:#707070';
+  }
+}
 }
 function colorchange(button_id,id){
   if(k!=1){
