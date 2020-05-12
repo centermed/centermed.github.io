@@ -16,8 +16,12 @@
     <title>Онлайн-запись</title>
   </head>
   <body>
+<<<<<<< HEAD
      <script type="text/javascript" id="json" src="DATA_Services.txt" ></script>
      <script type="text/javascript" src="Data_Vrachi_Time.txt"></script>
+=======
+     <script type="text/javascript" id="json" src="Data_Services.txt" ></script>
+>>>>>>> master
      <script type="text/javascript" src="DATA.txt" ></script>
      <script type="text/javascript" src="script.js"></script>
      
@@ -31,12 +35,11 @@
         <div class = "logo col-md-2 offset-md-1 col-sm-12">
           <b><a href="index.html">ЦЕНТРМЕД</a></b></div>
         <div class = "call col-md-4 offset-md-1 col-sm-6" align="center">
-          <a href = "#" data-toggle="modal" data-target="#exampleModalCenter2">
-            <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> &#8635 Заказать обратный звонок</a>
+          <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> &#8635 Заказать обратный звонок</a>
         </div>
         <div class = "col-md-2 offset-md-1 col-sm-6">
           <a href="record.html">
-          <button class = 'record' href = "record.html"><b>Онлайн-запись</b></button>
+          <button class = 'record' href = "record.html"><b>Онлайн-запись</b></button></a>
         </div>
       </div>
       <div class = "row">
@@ -47,8 +50,8 @@
           <a href="services.html"><b>Услуги</b></a>
         </div>
         <div class = "col-md-2 col-sm-3" align="center">
-          <a href="prices.html"><b>Цены</b></a>
-          </div>
+          <a href="stocks.html"><b>Акции</b></a>
+        </div>
         <!--<div class = "col-2" align="center">
           <a href="doctors.html"><b>Врачи</b></a>
         </div>-->
@@ -57,7 +60,7 @@
         </div>
         <div class = "col-md-2 col-sm-3" align="center">
           <a href="to_patients.html"><b>Пациентам</b></a>
-          </div>
+        </div>
       </div>
     </div>
 
@@ -80,15 +83,35 @@
                 <label for="number">Номер телефона</label>
                 <input type="phone" class="form-control" id="number" placeholder="+7(922)1212120">
               </div>
+               <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#call-form-answers" data-dismiss="modal">Отправить</button>
+            </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="call-form-answers" tabindex="-1" role="dialog" aria-labelledby="nametitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Ожидайте звонка</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="name">Ваша заявка принята! Администратор в ближайшее время свяжется с вами.</label>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
 
     <div class = "hier-record after-menu container">
       <div class = "row">
@@ -119,13 +142,12 @@
           помощью актуального 
           расписания</p>
         </div>
-        
       </div>
     </div>
 
     <div class = "container">
       <div class = "row">
-        <div class = "col-8 offset-2" align="center">
+        <div class = "heading-record col-md-8 offset-md-2 col-sm-12" align="center">
           <h2><b>Запишитесь на прием к врачу онлайн</b></h2>
         </div>
         </div>
@@ -155,10 +177,10 @@
         <div class = "doctor col-md-10 offset-md-1 col-sm-12" align="center">\
           <div class = "container-fluid">\
             <div class = "row">\
-              <div class = "photo col-md-2 col-sm-6">\
+             <div class = "photo col-md-2 col-sm-6">\
                 <img src ='+source+'>\
               </div>\
-              <div class = "text-doctor col-md-5 col-sm-6" align = left>\
+               <div class = "text-doctor col-md-5 col-sm-6" align = left>\
                 <p id="speciality'+i+'" value="Терапевт">'+speciality+'</p>\
                 <h2><b id="nameofdoctor'+i+'">'+name+'</b></h2>\
                 <p> Стаж '+work_age+'</p>\
@@ -242,17 +264,15 @@
                   </div>
                 </div>
               <div class= "row">
-                  <div class="col">
+                  <div class="col padd_r">
                     <input type="text" id="speciality" class="form-control" name="direction" placeholder="Психиатрия-наркология" readonly>
                   </div>
-              </div>
-              <div class= "row">
-                  <div class="col">
+                  <div class="col padd_l">
                     <select name = "Usluga" onChange="setOption()" id="service_options" class="form-control">
                       <option value = "1">Услуга 1</option>   
                     </select>
                   </div>
-              </div>
+                </div>
               </div>
               <div class="form-group">
                 <label for="datetime">Время приема</label>
@@ -283,13 +303,33 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-              <button name = "submit" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
+              <button name = "submit" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#record-answers" data-dismiss="modal">Отправить</button>
             </div>
           </form>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="record-answers" tabindex="-1" role="dialog" aria-labelledby="nametitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Онлайн-запись</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="name">Вы записаны на прием! Подробную информацию о записи мы отправили вам в СМС.</label>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class = "container">
       <div class = "row">
         <div class = "sosials col-md-3 offset-md-1" align = left>
@@ -319,7 +359,7 @@
             <li><a href="clinic.html"><b>Клиника</b></a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="stocks.html">Акции</a></li>
-            <li><a href="prices.html">Цены</a></li>
+            <li><a href="services.html">Цены</a></li>
           </ul>
         </div>
         <div class = "col-md-3 col-sm-4">

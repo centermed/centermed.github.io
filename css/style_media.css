@@ -229,3 +229,12 @@
     margin-top: -1px;
   }
 }
+
+@media (max-width: 320px) {
+  .hier-record{
+    margin-top: 90px;
+  }
+  .heading-record h2{
+    font-size: 1em;
+  }
+}

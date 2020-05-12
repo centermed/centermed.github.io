@@ -45,7 +45,7 @@
           <a href="services.html"><b>Услуги</b></a>
         </div>
         <div class = "col-md-2 col-sm-3" align="center">
-          <a href="prices.html"><b>Цены</b></a>
+          <a href="stocks.html"><b>Акции</b></a>
           </div>
         <!--<div class = "col-2" align="center">
           <a href="doctors.html"><b>Врачи</b></a>
@@ -59,34 +59,54 @@
       </div>
     </div>
 
-<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter2Title" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter2Title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Заказать обратный звонок</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Заказать обратный звонок</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">ФИО</label>
+                <input type="text" class="form-control" id="name" placeholder="Иванов Иван Иванович">
+              </div>
+              <div class="form-group">
+                <label for="number">Номер телефона</label>
+                <input type="phone" class="form-control" id="number" placeholder="+7(922)1212120">
+              </div>
+               <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#call-form-answers" data-dismiss="modal">Отправить</button>
             </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="name">ФИО</label>
-                        <input type="text" class="form-control" id="name" placeholder="Иванов Иван Иванович">
-                    </div>
-                    <div class="form-group">
-                        <label for="number">Номер телефона</label>
-                        <input type="phone" class="form-control" id="number" placeholder="+7(922)1212120">
-                    </div>
-                </form>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#name" data-dismiss="modal">Отправить</button>
-                </div>
-            </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+
+    <div class="modal fade" id="call-form-answers" tabindex="-1" role="dialog" aria-labelledby="nametitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Ожидайте звонка</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="name">Ваша заявка принята! Администратор в ближайшее время свяжется с вами.</label>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 <div class = "after-menu info container-fluid">
     <div class = "row justify-content-center">
@@ -152,7 +172,7 @@
             <li><a href="clinic.html"><b>Клиника</b></a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="stocks.html">Акции</a></li>
-            <li><a href="prices.html">Цены</a></li>
+            <li><a href="services.html">Цены</a></li>
           </ul>
         </div>
         <div class = "col-md-3 col-sm-4">

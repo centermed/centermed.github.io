@@ -9,7 +9,7 @@
     if(i==2) var s="media/slide"+i+".png";
     else var s="media/slide"+i+".jpg";
     document.getElementById("slide_id").src=s;
-   // timerId = setTimeout(setimg, 20000,1);
+    timerId = setTimeout(setimg, 5000 ,1);
   }
  function img_enter(){
  	 document.getElementById("logomed").src='media/cm3.svg';
