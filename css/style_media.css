@@ -238,3 +238,13 @@
     font-size: 1em;
   }
 }
+@media (max-width: 375px) {
+  .hier-record{
+    margin-top: 90px;
+  }
+}
+@media (max-width: 425px) {
+  .hier-record{
+    margin-top: 90px;
+  }
+}
