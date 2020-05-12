@@ -228,6 +228,18 @@
   .info{
     margin-top: -1px;
   }
+  .heading h2{
+    font-size: 1.8rem;
+}
+@media (min-width: 1030px) {
+  .sl-max{
+    height: 105.5vh;
+  }
+  .info{
+    margin-top: -1px;
+  }
+  .heading h2{
+    font-size: 1.8rem;
 }
 
 @media (max-width: 320px) {
