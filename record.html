@@ -166,7 +166,7 @@
       university=mydata[i*5+3];
       if(university=="0") university=" ";
       cost="бесценно";
-      source="media/"+i+".png";   
+      source="media/doctors/"+Number(i+1)+".jpg";   
                   now=new Date();
                   dates=now.getDate();
                   hours=now.getHours();
@@ -199,14 +199,15 @@
                     if(data_time[index]==i && data_time[index+1]==dates) {return true;}
                     else {return false;}
                   });
-                  s+='<button data-toggle="modal" data-target="#exampleModalCenter" onclick="setButton(\'16:50\',0)">16:50</button>';
+                  x_counter=0;
                   for(var x=3;x<34;x++){
                   if(data_time[index_1+x]!=0){
                     button_time=data_time[index_1+x].split('-');
                     test_time=button_time[0].split(':');
-                    //if(test_time[0]<hours || (test_time[0]==hours && test_time[1]<minutes)) disabled="disabled";
-                    disabled="";
-                   s+='<button data-toggle="modal" data-target="#exampleModalCenter" onClick="setButton(\"13:40\",1)"'+disabled+'>'+button_time[0]+'</button>';  
+                    if(test_time[0]<hours || (test_time[0]==hours && test_time[1]<minutes)) disabled="disabled";
+                    else disabled="";
+                    s+='<button data-toggle="modal" id="button'+i+x_counter+'" data-target="#exampleModalCenter" onclick="setButton(\''+data_time[index_1+x]+'\','+i+')"'+disabled+'>'+button_time[0]+'</button>';
+                    x_counter++;
                    }
                 }
                 s+='</div>\

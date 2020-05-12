@@ -1,4 +1,4 @@
-   var i=1,count=0,d=0,k=0;
+   var i=1,count=0,d=0,k=0,date=0 ;
   function setimg(a){
     if(a==0 && i==1) i=4;
     else if(a==0 && i>1) i--;
@@ -27,7 +27,7 @@
   document.getElementById('costs').placeholder=uslugi[selected*3+2]+String.fromCharCode(8381);
 
  }
- function setButton(a,id_count){
+ function setButton(time,id_count){
    document.getElementById("speciality").placeholder=mydata[id_count*5+4];
    a=document.getElementById("service_options");
    uslugi=data_usluga.split(';').join("^").split('^');
@@ -46,12 +46,14 @@
     count_date=0;
     for (var i=now_date;i<=31;i++) {
       document.getElementById("date_priem").options[count_date]=new Option(i+".05.2020","str"+i);
+      if(date==i) document.getElementById("date_priem").options[count_date].selected="selected";
       count_date++;
     }
     time_counter=0;
-    for(var x=3;x<34;x++){
+    for(var x=2;x<34;x++){
                   if(data_time[id_count*34+x]!=0){
                     document.getElementById("time_priema").options[time_counter]=new Option(data_time[id_count*34+x],"str"+time_counter);
+                    if(data_time[id_count*34+x]==time) document.getElementById("time_priema").options[time_counter].selected="selected";
                     time_counter++;
                 }
                 }    
@@ -62,6 +64,10 @@ function setDate(button_id,id){
   k=1;
   OurDate= new Date();
   date= OurDate.getDate();
+  dates=date;
+  hours= OurDate.getHours();
+  minutes=OurDate.getMinutes();
+  if(hours>20) dates++;
   document.getElementById("left"+id).style.color="#707070";
   document.getElementById("left"+id).style.backgroundColor="#F8F8FF";
    document.getElementById("center"+id).style.color="#707070";
@@ -70,20 +76,27 @@ function setDate(button_id,id){
   document.getElementById("right"+id).style.backgroundColor="#F8F8FF";
 	document.getElementById(button_id+id).style.color="#F8F8FF";
 	document.getElementById(button_id+id).style.backgroundColor="#2D8FD8";
+  if (button_id=="left" && dates==date) {
+    for (var x=0;x<=15;x++){
+      this_button=document.getElementById("button"+id+x);
+      button_time=this_button.innerHTML.split(":");
+      if(button_time[0]<hours || (button_time[0]==hours && button_time[1]<minutes)) this_button.disabled=true;
+    }
+  }
 	if(button_id=="center") date++;
 	if(button_id=="right") date+=2;
-	 document.getElementById("date").value=date+".05.2020"
+	 document.getElementById("date_priem").value=date+".05.2020"
 }
-function colorchange(button_id){
+function colorchange(button_id,id){
   if(k!=1){
-  document.getElementById("left").style.color="#707070";
-  document.getElementById("left").style.backgroundColor="#F8F8FF";
-   document.getElementById("center").style.color="#707070";
-  document.getElementById("center").style.backgroundColor="#F8F8FF";
-   document.getElementById("right").style.color="#707070";
-  document.getElementById("right").style.backgroundColor="#F8F8FF";
-  document.getElementById(button_id).style.color="F8F8FF";
-  document.getElementById(button_id).style.backgroundColor="#2D8FD8";
+  document.getElementById("left"+id).style.color="#707070";
+  document.getElementById("left"+id).style.backgroundColor="#F8F8FF";
+   document.getElementById("center"+id).style.color="#707070";
+  document.getElementById("center"+id).style.backgroundColor="#F8F8FF";
+   document.getElementById("right"+id).style.color="#707070";
+  document.getElementById("right"+id).style.backgroundColor="#F8F8FF";
+  document.getElementById(button_id+id).style.color="F8F8FF";
+  document.getElementById(button_id+id).style.backgroundColor="#2D8FD8";
 }
 }
 function setService(id){
