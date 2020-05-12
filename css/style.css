@@ -219,8 +219,7 @@ a:hover{
   margin-top:20px;
   min-height: 300px;
   background-color:#DBE9EB;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
+  border-radius: 30px;
 }
 
 
@@ -361,4 +360,5 @@ a:hover{
 }
 .blocked{
   background: #808080;
+  opacity: .3;
 }
