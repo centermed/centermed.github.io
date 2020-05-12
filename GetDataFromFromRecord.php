@@ -75,10 +75,10 @@
     
 	for($i=1;$i<=32;$i++)
 	{
-		$index = 'vrem'.$i;
-	  if($ArraOfTime[$index] == $form_Zapic_time)
+	
+	  if($ArraOfTime[$i] == $form_Zapic_time)
 	  {
-		 echo  $ArraOfTime[$index] = $MAX_ID;
+		 $ArraOfTime[$i] = "$MAX_ID";
 	  }
 	}
 

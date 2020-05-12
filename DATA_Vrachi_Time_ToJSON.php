@@ -7,7 +7,7 @@ $link = mysqli_connect($hostname,$login,$password);
 $basename = "id13589731_basepd";
 $select = mysqli_select_db($link,$basename);
 
-$query = "SELECT COUNT(*) FROM svobodnoevremya";
+$query = "SELECT COUNT(*) FROM svobodnoevremya WHERE idvrach < 10";
 
 $res_ids = mysqli_query($link, $query);
 
@@ -70,22 +70,18 @@ $Time32 = $arrayOfids['vrem32'];
 
 
 $masOfTime[$i] = array(id_Врача => $id_vrach, Дата => $Date, Время1 => $Time1,
-Время2 => $Time2,Время3 => $Time3,Время4 => $Time5,Время6 => $Time6,
+Время2 => $Time2,Время3 => $Time3,Время4 => $Time4,Время5 => $Time5,Время6 => $Time6,
 Время7 => $Time7,Время8 => $Time8,Время9 => $Time9,Время10 => $Time10,
 Время11 => $Time11,Время12 => $Time12,Время13 => $Time13,Время14 => $Time14,
-Время15 => $Time15,Время16 => $Time16,Время17 => $Time17,Время18 => $Time18,
-Время19 => $Time19,Время20 => $Time20,Время21 => $Time21,Время22 => $Time22,
-Время23 => $Time23,Время24 => $Time24,Время25 => $Time25,Время26 => $Time26,
-Время27 => $Time27,Время28 => $Time28,Время29 => $Time29,Время30 => $Time30,
-Время31 => $Time1,Время31 => $Time31,Время32 => $Time32);
+Время15 => $Time15,Время16 => $Time16);
 if($i==0){
-$str = $str."data_time_svobod"."= "; 
-$str = $str."'".implode('^', $masOfTime[$i])."'".";"."\n";
+$str = $str."data_time_svobod"."="; 
+$str = $str."'".implode('^', $masOfTime[$i])."'".";";
 }
 else
 {
-   $str = $str."data_time_svobod"."+= "; 
-$str = $str."'".implode('^', $masOfTime[$i])."'".";"."\n"; 
+   $str = $str."data_time_svobod"."+="; 
+$str = $str."'".implode('^', $masOfTime[$i])."'".";"; 
 }
 
 }
