@@ -9,7 +9,7 @@
     if(i==2) var s="media/slide"+i+".png";
     else var s="media/slide"+i+".jpg";
     document.getElementById("slide_id").src=s;
-    timerId = setTimeout(setimg, 5000 ,1);
+    timerId = setInterval(setimg, 10000,1);
   }
  function img_enter(){
  	 document.getElementById("logomed").src='media/cm3.svg';
@@ -25,7 +25,10 @@
  function setOption(){
   selected=document.getElementById("service_options").selectedIndex;
   document.getElementById('costs').placeholder=uslugi[selected*3+2]+String.fromCharCode(8381);
-
+  selected=document.getElementById("date_priem").selectedIndex;
+   selected=document.getElementById("date_priem").value= selected;
+  document.getElementById("time_priema").selectedIndex;
+  document.getElementById("time_priema").value= selected;
  }
  function setButton(time,id_count){
    document.getElementById("speciality").placeholder=mydata[id_count*5+4];
@@ -58,7 +61,7 @@
                 }
                 }    
    document.getElementById("doctor_name").placeholder=mydata[id_count*5+1];
-   document.getElementById("doctors_id").placeholder=mydata[id_count*5+0];;
+   document.getElementById("doctors_id").placeholder=mydata[id_count*5+0];
 }
 function setDate(button_id,id){
   k=1;
