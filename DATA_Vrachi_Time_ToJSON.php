@@ -23,9 +23,9 @@ $res_ids = mysqli_query($link, $query);
 
 $arrayOfids = mysqli_fetch_array($res_ids);
 
-for($p=1; $p<=32; $p++){
+for($p=1; $p<33; $p++){
  $index = 'vrem'.$p;
-if($arrayOfids[$index]=="")
+if(empty($arrayOfids[$index]))
 {
     $arrayOfids[$index] = "0";
 }
@@ -77,12 +77,19 @@ $masOfTime[$i] = array(id_Врача => $id_vrach, Дата => $Date, Время
 Время19 => $Time19,Время20 => $Time20,Время21 => $Time21,Время22 => $Time22,
 Время23 => $Time23,Время24 => $Time24,Время25 => $Time25,Время26 => $Time26,
 Время27 => $Time27,Время28 => $Time28,Время29 => $Time29,Время30 => $Time30,
-Время31 => $Time1,Время31 => $Time1,Время32 => $Time32);
-
-
-$str = $str.implode( '^', $masOfTime[$i]).";";
+Время31 => $Time1,Время31 => $Time31,Время32 => $Time32);
+if($i==0){
+$str = $str."data_time_svobod"."= "; 
+$str = $str."'".implode('^', $masOfTime[$i])."'".";"."\n";
 }
-$str = "\n\n data_time_svobod = "."'".$str."'".";";
+else
+{
+   $str = $str."data_time_svobod"."+= "; 
+$str = $str."'".implode('^', $masOfTime[$i])."'".";"."\n"; 
+}
+
+}
+
 
 $fd = fopen("Data_Vrachi_Time.txt", 'w') or die("не удалось создать файл");
 fwrite($fd, $str);

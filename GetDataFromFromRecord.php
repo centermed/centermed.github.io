@@ -1,4 +1,5 @@
 
+
 <?PHP 
 	$host_name="localhost";
 	$user = "id13589731_centermed";
@@ -62,18 +63,29 @@
 	 `vrem30`, `vrem31`, `vrem32` FROM `svobodnoevremya` WHERE Data = '$form_Zapic_date'";
 	
 	$result_bd = mysqli_query($link, $query);
-    $ArraOfTime = mysqli_fetch_array($result_bd);
-	for($i=0;$i<32;$i++)
-	{
-	  if($ArraOfTime[$i] == $form_Zapic_time)
-	  {
-		  $ArraOfTime[$i] = "id_zapis";
-	  }
-	}
+	$ArraOfTime = mysqli_fetch_array($result_bd);
 	
 
+	$query = "SELECT id FROM zapis ORDER BY id DESC LIMIT 1";
+	$result_MAX = mysqli_query($link, $query);
+	$Max_ID_arr = mysqli_fetch_array($result_MAX);
+	$MAX_ID = $Max_ID_arr['id'];
+   
+    
+    
+	for($i=1;$i<=32;$i++)
+	{
+		$index = 'vrem'.$i;
+	  if($ArraOfTime[$index] == $form_Zapic_time)
+	  {
+		 echo  $ArraOfTime[$index] = $MAX_ID;
+	  }
+	}
+
+
+
 	$query = "UPDATE `svobodnoevremya` SET 
-	`Data`='id_zapis',
+	`Data`='$MAX_ID',
 	`vrem1`='$ArraOfTime[0]',
 	`vrem2`='$ArraOfTime[1]',
 	`vrem3`='$ArraOfTime[2]',
@@ -105,7 +117,7 @@
 	`vrem29`='$ArraOfTime[28]',
 	`vrem30`='$ArraOfTime[29]',
 	`vrem31`='$ArraOfTime[30]',
-	`vrem32`='$ArraOfTime[31]'";
+	`vrem32`='$ArraOfTime[31]' WHERE Data = '$form_Zapic_date'";
 	
 
 	$result_bd = mysqli_query($link, $query);
