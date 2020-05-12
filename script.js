@@ -50,15 +50,15 @@
       count_date++;
     }
     time_counter=0;
-    for(var x=2;x<34;x++){
-                  if(data_time[id_count*34+x]!=0){
-                    document.getElementById("time_priema").options[time_counter]=new Option(data_time[id_count*34+x],"str"+time_counter);
-                    if(data_time[id_count*34+x]==time) document.getElementById("time_priema").options[time_counter].selected="selected";
+    for(var x=2;x<18;x++){
+                  if(data_time[id_count*18+x]!=0){
+                    document.getElementById("time_priema").options[time_counter]=new Option(data_time[id_count*18+x],"str"+time_counter);
+                    if(data_time[id_count*18+x]==time) document.getElementById("time_priema").options[time_counter].selected="selected";
                     time_counter++;
                 }
                 }    
    document.getElementById("doctor_name").placeholder=mydata[id_count*5+1];
-   //document.getElementById("doctor_name").value=id_count;
+   document.getElementById("doctors_id").placeholder=mydata[id_count*5+0];;
 }
 function setDate(button_id,id){
   k=1;
