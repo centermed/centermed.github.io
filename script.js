@@ -1,11 +1,13 @@
    var i=1,count=0,d=0,k=0;
   function setimg(a){
-    if(a==0 && i==1) i=5;
+    if(a==0 && i==1) i=4;
     else if(a==0 && i>1) i--;
-    else if(a==1 && i<5) i++;
-    else if(a==1 && i==5) i=1;
-    if(i>2) var s="media/slide"+i+".jpg"
-    else var s="media/slide"+i+".png"
+    else if(a==1 && i<4) i++;
+    else if(a==1 && i==4) i=1;
+    for(var slider_c=1;slider_c<5;slider_c++) document.getElementById('slider'+slider_c).style.display="none";
+    document.getElementById('slider'+i).style.display="block";
+    if(i==2) var s="media/slide"+i+".png";
+    else var s="media/slide"+i+".jpg";
     document.getElementById("slide_id").src=s;
    // timerId = setTimeout(setimg, 20000,1);
   }
@@ -22,7 +24,7 @@
  }
  function setOption(){
   selected=document.getElementById("service_options").selectedIndex;
-  document.getElementById('costs').placeholder=uslugi[selected*3+2];
+  document.getElementById('costs').placeholder=uslugi[selected*3+2]+String.fromCharCode(8381);
 
  }
  function setButton(a,id_count){
@@ -36,11 +38,30 @@
       a.options[options].selected=setOption(x);
       options++;
     }
-   }
+  }
+    now = new Date();
+    now_date=now.getDate();
+    hours=now.getHours();
+    if(hours>20) now_date++;
+    count_date=0;
+    for (var i=now_date;i<=31;i++) {
+      document.getElementById("date_priem").options[count_date]=new Option(i+".05.2020","str"+i);
+      count_date++;
+    }
+    time_counter=0;
+    for(var x=3;x<34;x++){
+                  if(data_time[id_count*34+x]!=0){
+                    document.getElementById("time_priema").options[time_counter]=new Option(data_time[id_count*34+x],"str"+time_counter);
+                    time_counter++;
+                }
+                }    
    document.getElementById("doctor_name").placeholder=mydata[id_count*5+1];
+   //document.getElementById("doctor_name").value=id_count;
 }
 function setDate(button_id,id){
   k=1;
+  OurDate= new Date();
+  date= OurDate.getDate();
   document.getElementById("left"+id).style.color="#707070";
   document.getElementById("left"+id).style.backgroundColor="#F8F8FF";
    document.getElementById("center"+id).style.color="#707070";
@@ -49,10 +70,9 @@ function setDate(button_id,id){
   document.getElementById("right"+id).style.backgroundColor="#F8F8FF";
 	document.getElementById(button_id+id).style.color="#F8F8FF";
 	document.getElementById(button_id+id).style.backgroundColor="#2D8FD8";
-	if(button_id=="left") date=11
-	if(button_id=="center") date=12
-	if(button_id=="right") date=13
-	 document.getElementById("date").placeholder=date+".05.2020"
+	if(button_id=="center") date++;
+	if(button_id=="right") date+=2;
+	 document.getElementById("date").value=date+".05.2020"
 }
 function colorchange(button_id){
   if(k!=1){
