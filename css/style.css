@@ -361,4 +361,5 @@ a:hover{
 }
 .blocked{
   background: #808080;
+  opacity: .3;
 }
