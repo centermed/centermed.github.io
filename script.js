@@ -30,12 +30,10 @@
   selected=document.getElementById("date_priem").selectedIndex;
   document.getElementById("date_priem").value=Number(date+selected)+".05.2020";
   document.getElementById("date_priem").selectedIndex=selected;
-  alert(document.getElementById("date_priem").value);
  }
  function changeTime(){
   selected=document.getElementById("time_priema").selectedIndex;
   valueoftime=document.getElementById("time_priema").options[selected].value;
-  alert(valueoftime);
   document.getElementById("time_priema").value=valueoftime;
   document.getElementById("time_priema").selectedIndex=selected;
  }
