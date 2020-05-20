@@ -71,6 +71,8 @@
                 }    
    document.getElementById("doctor_name").placeholder=mydata[id_count*5+1];
    document.getElementById("doctors_id").placeholder=mydata[id_count*5+0];
+   document.getElementById("doctor_name").value=mydata[id_count*5+1];
+   document.getElementById("doctors_id").value=mydata[id_count*5+0];
 }
 function setDate(button_id,id){
   k=1;
