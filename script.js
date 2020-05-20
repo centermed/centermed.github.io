@@ -25,10 +25,19 @@
  function setOption(){
   selected=document.getElementById("service_options").selectedIndex;
   document.getElementById('costs').placeholder=uslugi[selected*3+2]+String.fromCharCode(8381);
+ }
+ function changeDate(){
   selected=document.getElementById("date_priem").selectedIndex;
-   selected=document.getElementById("date_priem").value= selected;
-  document.getElementById("time_priema").selectedIndex;
-  document.getElementById("time_priema").value= selected;
+  document.getElementById("date_priem").value=Number(date+selected)+".05.2020";
+  document.getElementById("date_priem").selectedIndex=selected;
+  alert(document.getElementById("date_priem").value);
+ }
+ function changeTime(){
+  selected=document.getElementById("time_priema").selectedIndex;
+  valueoftime=document.getElementById("time_priema").options[selected].value;
+  alert(valueoftime);
+  document.getElementById("time_priema").value=valueoftime;
+  document.getElementById("time_priema").selectedIndex=selected;
  }
  function setButton(time,id_count){
    document.getElementById("speciality").placeholder=mydata[id_count*5+4];
@@ -37,8 +46,7 @@
    options=0;
    for(var x=0;x<uslugi.length/3-1;x++){
     if(mydata[id_count*5+4]==uslugi[x*3]){
-      a.options[options]=new Option(uslugi[x*3+1],"str"+options);
-      a.options[options].selected=setOption(x);
+      a.options[options]=new Option(uslugi[x*3+1],uslugi[x*3+1]);
       options++;
     }
   }
@@ -48,15 +56,15 @@
     if(hours>20) now_date++;
     count_date=0;
     for (var i=now_date;i<=31;i++) {
-      document.getElementById("date_priem").options[count_date]=new Option(i+".05.2020","str"+i);
-      if(date==i) document.getElementById("date_priem").options[count_date].selected="selected";
+      document.getElementById("date_priem").options[count_date]=new Option(i+".05.2020",i+".05.2020");
+      if(date==i) {document.getElementById("date_priem").options[count_date].selected="selected";}
       count_date++;
     }
     time_counter=0;
     for(var x=2;x<18;x++){
                   if(data_time[id_count*18+x]!=0){
-                    document.getElementById("time_priema").options[time_counter]=new Option(data_time[id_count*18+x],"str"+time_counter);
-                    if(data_time[id_count*18+x]==time) document.getElementById("time_priema").options[time_counter].selected="selected";
+                    document.getElementById("time_priema").options[time_counter]=new Option(data_time[id_count*18+x],data_time[id_count*18+x]);
+                    if(data_time[id_count*18+x]==time)document.getElementById("time_priema").options[time_counter].selected="selected";
                     time_counter++;
                 }
                 }    

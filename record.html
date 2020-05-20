@@ -16,8 +16,6 @@
     <title>Онлайн-запись</title>
   </head>
   <body>
-
-     <script type="text/javascript" id="json" src="DATA_Services.txt" ></script>
      <script type="text/javascript" src="Data_Vrachi_Time.txt"></script>
 
      <script type="text/javascript" id="json" src="Data_Services.txt" ></script>
@@ -283,13 +281,13 @@
                 <input type="text" id="doctors_id" hidden>
                 <div class= "row">
                   <div class="col">
-                    <select name = "Date_Priema" id="date_priem" value="0" class="form-control">
+                    <select name = "Date_Priema" id="date_priem" onChange="changeDate()" value="0" class="form-control">
                       <option value="1.05.20"> 1.05.20</option>
                       <option value="2.05.20"> 2.05.20 </option> 
                     </select>
                   </div>
                   <div class="col">
-                    <select name = "Time_Priema" id="time_priema" class="form-control">
+                    <select name = "Time_Priema" id="time_priema" onChange="changeTime()" class="form-control">
                       <option value="9:00-9:30">9:00-9:30 </option>
                       <option value="9:40-10:10">9:40-10:10 </option>        
                     </select>
