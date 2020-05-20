@@ -30,6 +30,8 @@
   selected=document.getElementById("date_priem").selectedIndex;
   document.getElementById("date_priem").value=Number(date+selected)+".05.2020";
   document.getElementById("date_priem").selectedIndex=selected;
+  alert(document.getElementById("date_priem").value);
+  alert(document.getElementById("time_priema").value);
  }
  function changeTime(){
   selected=document.getElementById("time_priema").selectedIndex;
@@ -39,6 +41,7 @@
  }
  function setButton(time,id_count){
    document.getElementById("speciality").placeholder=mydata[id_count*5+4];
+   document.getElementById("speciality").value=mydata[id_count*5+4];
    a=document.getElementById("service_options");
    uslugi=data_usluga.split(';').join("^").split('^');
    options=0;
