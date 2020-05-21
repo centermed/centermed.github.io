@@ -12,17 +12,16 @@
     <link rel="stylesheet" href="css/style_media.css" type="text/css">
 
     <link rel="shortcut icon" href="media/logo.svg" type="image/png">
-
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="ajax.js"></script>
     <title>Онлайн-запись</title>
   </head>
   <body>
+     <script type="text/javascript" src="Data_Vrachi_Time.js"></script>
 
-     <script type="text/javascript" id="json" src="DATA_Services.txt" ></script>
-     <script type="text/javascript" src="Data_Vrachi_Time.txt"></script>
+     <script type="text/javascript" id="json" src="Data_Services.js" ></script>
 
-     <script type="text/javascript" id="json" src="Data_Services.txt" ></script>
-
-     <script type="text/javascript" src="DATA.txt" ></script>
+     <script type="text/javascript" src="DATA.js" ></script>
      <script type="text/javascript" src="script.js"></script>
      
     <!-- Optional JavaScript -->
@@ -195,7 +194,7 @@
                   <button id=\'right'+i+'\' class = \'right\' onmouseover="colorchange(\'right\','+i+')" onclick="setDate(\'right\','+i+')">'+Number(dates+2)+' мая</button>\
                 </div>\
                 <div class = \'time-panel\' onclick=>';
-                  dates+=".05.2020";
+                  dates+=".05.20";
                   var index_1=data_time.findIndex(function(item, index, array){
                     if(data_time[index]==i && data_time[index+1]==dates) {return true;}
                     else {return false;}
@@ -240,7 +239,7 @@
             </button>
           </div>
           <div class="modal-body">  
-            <form name = "Zapis" action = "GetDataFromFromRecord.php" method = "POST">
+            <form name = "Zapis"  action = "GetDataFromFromRecord.php" method = "POST">
               <div class="form-group">
                 <label for="familyname">Фамилия</label>
                 <input type="text" class="form-control" name="familyname" placeholder="Иванов">
@@ -280,16 +279,16 @@
               </div>
               <div class="form-group">
                 <label for="datetime">Время приема</label>
-                <input type="text" id="doctors_id" hidden>
+                <input type="hidden" name= "doctors_id" id="doctors_id" >
                 <div class= "row">
                   <div class="col">
-                    <select name = "Date_Priema" id="date_priem" value="0" class="form-control">
+                    <select name = "Date_Priema" id="date_priem" onChange="changeDate()" value="0" class="form-control">
                       <option value="1.05.20"> 1.05.20</option>
                       <option value="2.05.20"> 2.05.20 </option> 
                     </select>
                   </div>
                   <div class="col">
-                    <select name = "Time_Priema" id="time_priema" class="form-control">
+                    <select name = "Time_Priema" id="time_priema" onChange="changeTime()" class="form-control">
                       <option value="9:00-9:30">9:00-9:30 </option>
                       <option value="9:40-10:10">9:40-10:10 </option>        
                     </select>
@@ -308,9 +307,10 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-              <button name = "submit" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#record-answers" data-dismiss="modal">Отправить</button>
+              <input name = "submit" onClick="alert('Запись отправлена! Администратор свяжется с вами, ожидайте звонка')" type="submit" class="btn btn-primary" >
             </div>
           </form>
+          <div id="result_form"></div> 
           </div>
         </div>
       </div>

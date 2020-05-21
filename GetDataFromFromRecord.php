@@ -1,28 +1,12 @@
-
-
 <?PHP 
 	$host_name="localhost";
 	$user = "id13589731_centermed";
-	$password = "e#EHG(YqO(X)Uy8jTSYy";
+	$password = "e#EHG(Yq1(X)Uy8jTSYy";
 	
-	if($link = mysqli_connect($host_name,$user, $password))
-	{
-		echo "Пользователь $user подключен <br>";
-		
-	}
-	else
-	{
-		echo "Пользователь $user не подключен <br>";
-	}
-	if(mysqli_select_db($link,"id13589731_basepd"))
-	{
-		echo "База выбрана! <br>";
-		
-	}
-	else
-	{
-		echo "База не выбрана или была уже выбрана ранее!<br>";
-	}
+	$link = mysqli_connect($host_name,$user, $password);
+
+	mysqli_select_db($link,"id13589731_basepd");
+
 	
     $res = $_POST['submit'];
 	
@@ -34,23 +18,30 @@
 	$form_Zapic_date = $_POST['Date_Priema'];
 	$form_Zapic_time = $_POST['Time_Priema'];
 	$Usluga = $_POST['Usluga'];
+	$Vrach = $_POST['id_vrach'];
+	$Napravlenie = $_POST['direction'];
+	$id_vrach = $_POST['doctors_id'];
+	
+	$query = "SELECT id FROM `services` WHERE service = '$Usluga'";
+	$result_bd = mysqli_query($link, $query);
+	$arra_id_usluga = mysqli_fetch_array($result_bd);
+	$id_uslug = $arra_id_usluga['id'];
+
+	$query = "SELECT id FROM `specializations` WHERE specialization = '$Napravlenie'";
+	$result_bd = mysqli_query($link, $query);
+	$arra_id_spec = mysqli_fetch_array($result_bd);
+	$id_spec = $arra_id_spec['id'];
+	
 	
    $query = "INSERT INTO `zapis`(`Familia`, `Imya`, `Otchestvo`,
     `Telefon`, `Napravlenie`, `Usluga`, `Vrach`, `Data`, `Vremya`) VALUES ('$form_Zapic_familyname', '$form_Zapic_name', 
-	'$form_Zapic_secondname', '$form_Zapic_number','0','$Usluga',
-	'0','$form_Zapic_date','$form_Zapic_time')";
+	'$form_Zapic_secondname', '$form_Zapic_number','$id_spec','$id_uslug',
+	'$id_vrach','$form_Zapic_date','$form_Zapic_time')";
 	
 	 
 
 	$result_bd = mysqli_query($link, $query);
-	if($result_bd)
-	{
-		echo "Запись успешно отправлена!<br>";
-	}
-	else{
-		
-		echo "Запись не была отправлена!<br>";
-	}
+
 	
 	}
 	
@@ -60,12 +51,13 @@
 	`vrem12`, `vrem13`, `vrem14`, `vrem15`, `vrem16`, `vrem17`,
 	 `vrem18`, `vrem19`, `vrem20`, `vrem21`, `vrem22`, `vrem23`, 
 	 `vrem24`, `vrem25`, `vrem26`, `vrem27`, `vrem28`, `vrem29`, 
-	 `vrem30`, `vrem31`, `vrem32` FROM `svobodnoevremya` WHERE Data = '$form_Zapic_date'";
+	 `vrem30`, `vrem31`, `vrem32` FROM `svobodnoevremya` WHERE Data = '$form_Zapic_date' AND idvrach = '$id_vrach'";
 	
 	$result_bd = mysqli_query($link, $query);
 	$ArraOfTime = mysqli_fetch_array($result_bd);
 	
-
+   
+    
 	$query = "SELECT id FROM zapis ORDER BY id DESC LIMIT 1";
 	$result_MAX = mysqli_query($link, $query);
 	$Max_ID_arr = mysqli_fetch_array($result_MAX);
@@ -73,19 +65,18 @@
    
     
     
-	for($i=1;$i<=32;$i++)
+	for($l=0;$l<32;$l++)
 	{
 	
-	  if($ArraOfTime[$i] == $form_Zapic_time)
-	  {
-		 $ArraOfTime[$i] = "$MAX_ID";
-	  }
+	 if($ArraOfTime[$l]==$form_Zapic_time){
+		 $ArraOfTime[$l] = $MAX_ID;
+	 }
+	  
 	}
 
 
 
 	$query = "UPDATE `svobodnoevremya` SET 
-	`Data`='$MAX_ID',
 	`vrem1`='$ArraOfTime[0]',
 	`vrem2`='$ArraOfTime[1]',
 	`vrem3`='$ArraOfTime[2]',
@@ -117,19 +108,14 @@
 	`vrem29`='$ArraOfTime[28]',
 	`vrem30`='$ArraOfTime[29]',
 	`vrem31`='$ArraOfTime[30]',
-	`vrem32`='$ArraOfTime[31]' WHERE Data = '$form_Zapic_date'";
+	`vrem32`='$ArraOfTime[31]' WHERE Data = '$form_Zapic_date' AND idvrach = '$id_vrach'";
 	
 
 	$result_bd = mysqli_query($link, $query);
-	if($result_bd)
-	{
-		echo "Время успешно в свободном!<br>";
-	}
-	else{
-		
-		echo "Время не в свободном!<br>";
-	}
-
-
+	
+    header("Location: https://centermed.000webhostapp.com/record.html#record-answers")
+	
+    
+	
 	?>
 

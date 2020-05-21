@@ -2,7 +2,7 @@
 
 $hostname = "localhost";
 $login = "id13589731_centermed";
-$password = "e#EHG(YqO(X)Uy8jTSYy";
+$password = "e#EHG(Yq1(X)Uy8jTSYy";
 $link = mysqli_connect($hostname,$login,$password);
 $basename = "id13589731_basepd";
 $select = mysqli_select_db($link,$basename);
@@ -76,18 +76,18 @@ $masOfTime[$i] = array(id_Врача => $id_vrach, Дата => $Date, Время
 Время15 => $Time15,Время16 => $Time16);
 if($i==0){
 $str = $str."data_time_svobod"."="; 
-$str = $str."'".implode('^', $masOfTime[$i])."'".";";
+$str = $str."'".implode('^', $masOfTime[$i])."^"."'".";";
 }
 else
 {
    $str = $str."data_time_svobod"."+="; 
-$str = $str."'".implode('^', $masOfTime[$i])."'".";"; 
+$str = $str."'".implode('^', $masOfTime[$i])."^"."'".";"; 
 }
 
 }
 
 
-$fd = fopen("Data_Vrachi_Time.txt", 'w') or die("не удалось создать файл");
+$fd = fopen("Data_Vrachi_Time.js", 'w') or die("не удалось создать файл");
 fwrite($fd, $str);
 fclose($fd);
 

@@ -1,4 +1,4 @@
-   var i=1,count=0,d=0,k=0,date=0 ;
+var i=1,count=0,d=0,k=0,date=0 ;
   function setimg(a){
     if(a==0 && i==1) i=4;
     else if(a==0 && i>1) i--;
@@ -25,20 +25,28 @@
  function setOption(){
   selected=document.getElementById("service_options").selectedIndex;
   document.getElementById('costs').placeholder=uslugi[selected*3+2]+String.fromCharCode(8381);
+ }
+ function changeDate(){
   selected=document.getElementById("date_priem").selectedIndex;
-   selected=document.getElementById("date_priem").value= selected;
-  document.getElementById("time_priema").selectedIndex;
-  document.getElementById("time_priema").value= selected;
+  document.getElementById("date_priem").value=Number(date+selected)+".05.20";
+  document.getElementById("date_priem").selectedIndex=selected;
+ 
+ }
+ function changeTime(){
+  selected=document.getElementById("time_priema").selectedIndex;
+  valueoftime=document.getElementById("time_priema").options[selected].value;
+  document.getElementById("time_priema").value=valueoftime;
+  document.getElementById("time_priema").selectedIndex=selected;
  }
  function setButton(time,id_count){
    document.getElementById("speciality").placeholder=mydata[id_count*5+4];
+   document.getElementById("speciality").value=mydata[id_count*5+4];
    a=document.getElementById("service_options");
    uslugi=data_usluga.split(';').join("^").split('^');
    options=0;
    for(var x=0;x<uslugi.length/3-1;x++){
     if(mydata[id_count*5+4]==uslugi[x*3]){
-      a.options[options]=new Option(uslugi[x*3+1],"str"+options);
-      a.options[options].selected=setOption(x);
+      a.options[options]=new Option(uslugi[x*3+1],uslugi[x*3+1]);
       options++;
     }
   }
@@ -48,20 +56,22 @@
     if(hours>20) now_date++;
     count_date=0;
     for (var i=now_date;i<=31;i++) {
-      document.getElementById("date_priem").options[count_date]=new Option(i+".05.2020","str"+i);
-      if(date==i) document.getElementById("date_priem").options[count_date].selected="selected";
+      document.getElementById("date_priem").options[count_date]=new Option(i+".05.20",i+".05.20");
+      if(date==i) {document.getElementById("date_priem").options[count_date].selected="selected";}
       count_date++;
     }
     time_counter=0;
     for(var x=2;x<18;x++){
                   if(data_time[id_count*18+x]!=0){
-                    document.getElementById("time_priema").options[time_counter]=new Option(data_time[id_count*18+x],"str"+time_counter);
-                    if(data_time[id_count*18+x]==time) document.getElementById("time_priema").options[time_counter].selected="selected";
+                    document.getElementById("time_priema").options[time_counter]=new Option(data_time[id_count*18+x],data_time[id_count*18+x]);
+                    if(data_time[id_count*18+x]==time)document.getElementById("time_priema").options[time_counter].selected="selected";
                     time_counter++;
                 }
                 }    
    document.getElementById("doctor_name").placeholder=mydata[id_count*5+1];
    document.getElementById("doctors_id").placeholder=mydata[id_count*5+0];
+   document.getElementById("doctor_name").value=mydata[id_count*5+1];
+   document.getElementById("doctors_id").value=mydata[id_count*5+0];
 }
 function setDate(button_id,id){
   k=1;
@@ -92,7 +102,7 @@ function setDate(button_id,id){
   if(button_id!='left'){
 	if(button_id=="center") date++;
 	if(button_id=="right") date+=2;
-	 document.getElementById("date_priem").value=date+".05.2020"
+	 document.getElementById("date_priem").value=date+".05.20"
    for (var x=0;x<15;x++){
     this_button=document.getElementById("button"+id+x);
     this_button.disabled=false;

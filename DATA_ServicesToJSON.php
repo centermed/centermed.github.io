@@ -2,7 +2,7 @@
 
 $hostname = "localhost";
 $login = "id13589731_centermed";
-$password = "e#EHG(YqO(X)Uy8jTSYy";
+$password = "e#EHG(Yq1(X)Uy8jTSYy";
 $link = mysqli_connect($hostname,$login,$password);
 $basename = "id13589731_basepd";
 $select = mysqli_select_db($link,$basename);
@@ -41,7 +41,7 @@ $str = $str.implode( '^', $masOfUsluga[$i]).";";
 }
 $str = "\n\n data_usluga = "."'".$str."'".";";
 
-$fd = fopen("Data_Services.txt", 'w') or die("не удалось создать файл");
+$fd = fopen("Data_Services.js", 'w') or die("не удалось создать файл");
 fwrite($fd, $str);
 fclose($fd);
 
