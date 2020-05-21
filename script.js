@@ -28,11 +28,8 @@
  }
  function changeDate(){
   selected=document.getElementById("date_priem").selectedIndex;
-  document.getElementById("date_priem").value=Number(date+selected)+".05.2020";
-  document.getElementById("date_priem").selectedIndex=selected;
-  alert(document.getElementById("date_priem").value);
-  alert(document.getElementById("time_priema").value);
- }
+  document.getElementById("date_priem").value=Number(date+selected)+".05.20";
+  document.getElementById("date_priem").selectedIndex=selected; }
  function changeTime(){
   selected=document.getElementById("time_priema").selectedIndex;
   valueoftime=document.getElementById("time_priema").options[selected].value;
@@ -57,7 +54,7 @@
     if(hours>20) now_date++;
     count_date=0;
     for (var i=now_date;i<=31;i++) {
-      document.getElementById("date_priem").options[count_date]=new Option(i+".05.2020",i+".05.2020");
+      document.getElementById("date_priem").options[count_date]=new Option(i+".05.20",i+".05.20");
       if(date==i) {document.getElementById("date_priem").options[count_date].selected="selected";}
       count_date++;
     }
@@ -103,7 +100,7 @@ function setDate(button_id,id){
   if(button_id!='left'){
 	if(button_id=="center") date++;
 	if(button_id=="right") date+=2;
-	 document.getElementById("date_priem").value=date+".05.2020"
+	 document.getElementById("date_priem").value=date+".05.20"
    for (var x=0;x<15;x++){
     this_button=document.getElementById("button"+id+x);
     this_button.disabled=false;

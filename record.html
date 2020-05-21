@@ -168,6 +168,7 @@
       source="media/doctors/"+Number(i+1)+".jpg";   
                   now=new Date();
                   dates=now.getDate();
+                  test_dates=now.getDate();
                   hours=now.getHours();
                   minutes=now.getMinutes();
                   if(hours>20) dates++;
@@ -193,7 +194,7 @@
                   <button id=\'right'+i+'\' class = \'right\' onmouseover="colorchange(\'right\','+i+')" onclick="setDate(\'right\','+i+')">'+Number(dates+2)+' мая</button>\
                 </div>\
                 <div class = \'time-panel\' onclick=>';
-                  dates+=".05.2020";
+                  dates+=".05.20";
                   var index_1=data_time.findIndex(function(item, index, array){
                     if(data_time[index]==i && data_time[index+1]==dates) {return true;}
                     else {return false;}
@@ -203,7 +204,7 @@
                   if(data_time[index_1+x]!=0){
                     button_time=data_time[index_1+x].split('-');
                     test_time=button_time[0].split(':');
-                    if(test_time[0]<hours || (test_time[0]==hours && test_time[1]<minutes)) {
+                    if(test_dates==dates && test_time[0]<hours || (test_time[0]==hours && test_time[1]<minutes)) {
                       disabled="style='background-color: #a0a0a0; color:white'"+"disabled";}
                     else disabled="";
                     s+='<button data-toggle="modal" id="button'+i+x_counter+'" data-target="#exampleModalCenter" onclick="setButton(\''+data_time[index_1+x]+'\','+i+')"'+disabled+'>'+button_time[0]+'</button>';
