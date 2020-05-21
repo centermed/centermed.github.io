@@ -9,8 +9,10 @@
     if(i==2) var s="media/slide"+i+".png";
     else var s="media/slide"+i+".jpg";
     document.getElementById("slide_id").src=s;
-    timerId = setInterval(setimg, 10000,1);
   }
+  function AutoSlider(){
+  timerId = setInterval(setimg, 10000,1);
+}
  function img_enter(){
  	 document.getElementById("logomed").src='media/cm3.svg';
  }
@@ -54,7 +56,7 @@
     if(hours>20) now_date++;
     count_date=0;
     for (var i=now_date;i<=31;i++) {
-      document.getElementById("date_priem").options[count_date]=new Option(i+".05.20",i+".05.20");
+      document.getElementById("date_priem").options[count_date]=new Option(i+".05.20",i+".05.200");
       if(date==i) {document.getElementById("date_priem").options[count_date].selected="selected";}
       count_date++;
     }
