@@ -1,3 +1,7 @@
+@font-face {
+font-family: 'Segoe UI';
+src: url(../fonts/SegoeUI.ttf);
+}
 @media (min-width: 319px) {
   .slider{
     margin-top: 60px;
