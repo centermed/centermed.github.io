@@ -1,4 +1,8 @@
 @font-face {
+font-family: 'Segoe UI Bold';
+src: url(../fonts/SegoeUIBold.ttf);
+}
+@font-face {
 font-family: 'Segoe UI';
 src: url(../fonts/SegoeUI.ttf);
 }
@@ -46,6 +50,9 @@ src: url(../fonts/SegoeUI.ttf);
     font-size: 0.7em;
   }
   .crawl p{
+    font-size: 0.6em;
+  }
+  .banner{
     font-size: 0.6em;
   }
 }
@@ -185,6 +192,9 @@ src: url(../fonts/SegoeUI.ttf);
   }
   .crawl p{
     font-size: 0.9em;
+  }
+  .banner h2{
+    font-size: 2.5em;
   }
 }
 @media (min-width: 1023px) {
