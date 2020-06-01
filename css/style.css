@@ -179,7 +179,7 @@ a:hover{
 
 .sosials img{
   float:left;
-  margin-top: 18px;
+  margin-top: 10px;
 }
 
 .logobot{
@@ -187,10 +187,10 @@ a:hover{
 }
 
 .sosials a{
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .icon{
-  margin-top: 35px;
+  margin-top: 27px;
 }
 .icon img{
   margin-top:-1px;
@@ -364,4 +364,15 @@ a:hover{
 .blocked{
   background: #808080;
   opacity: 1;
+}
+
+.picture-link{
+  border-radius: 10px;
+  margin-top: 10px
+}
+.text-picture-link{
+  position: relative;
+  bottom: 2.2em;
+  text-align: center;
+  vertical-align: center;
 }

@@ -10,13 +10,14 @@
     
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/style_media.css" type="text/css">
+    <link rel="stylesheet" href="css/style_services.css" type="text/css">
 
     <link rel="shortcut icon" href="media/logo.svg" type="image/png">
 
-    <title>ЦентрМед</title>
+    <title>Пациентам</title>
   </head>
-  <body onload="AutoSlider()">
-     <script src="script.js"></script>
+  <body>
+    <script src="script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -27,7 +28,8 @@
         <div class = "logo col-md-2 offset-md-1 col-sm-12">
           <b><a href="index.html">ЦЕНТРМЕД</a></b></div>
         <div class = "call col-md-4 offset-md-1 col-sm-6" align="center">
-          <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> &#8635 Заказать обратный звонок</a>
+          <a href = "#" data-toggle="modal" data-target="#exampleModalCenter2">
+            <a href="#" data-toggle="modal" data-target="#exampleModalCenter2"> &#8635 Заказать обратный звонок</a>
         </div>
         <div class = "col-md-2 offset-md-1 col-sm-6">
           <a href="record.html">
@@ -56,48 +58,104 @@
       </div>
     </div>
 
-    <div class = "after-menu slider sl-max container-fluid">
+    <div class = "after-menu slider container-fluid">
       <div class = "row">
-        <div>
-          <a class="slider__control slider__control_prev" hrole="button" onclick="setimg(0)"></a>
-        </div>
         <div class = "col-12">
-          <img id="slide_id" src = "media/slide4.jpg">
-        </div>
-        <div class = "shadow"></div>
-        <div class = "text-slider" id='slider1' style="display: none">
-          <p><b>Отзывчивый и грамотный персонал - залог нашего успеха</b></p>
-        </div>
-        <div class = "text-slider" id='slider2' style="display: none">
-          <p><b>У нас работают настоящие профессионалы своего дела</b></p>
-        </div>
-        <div class = "text-slider" id='slider3' style="display: none">
-          <p><b>ЦентрМед - лидер медицинских исследований</b></p>
-        </div>
-        <div class = "text-slider" id='slider4' style="display: block">
-          <p><b>ЦентрМед - клиника с инновационным подходом к лечению</b></p>
-        </div>
-        <div>
-          <a class="slider__control slider__control_next slider__control_show" role="button" onclick="setimg(1)"></a>
+          <img src = "media/work.webp" width='100%'>
         </div>
       </div>
     </div>
 
     <div class = "container-fluid">
       <div class = "row justify-content-center">
-        <div class = "col-md-9 inform" align="justify ">
-          <h2 align="center"><b>Экспертная забота о вашем здоровье вместе с Центрмед</b></h2>
-          <p>ЦентрМед - это медицинский центр, а также отделение медицинских осмотров, психо-наркологический центр и клинико-диагностическая лаборатория. Амбулаторно-поликлиническая помощь в многопрофильной клинике «ЦентрМед» представлена лечебно-консультативным приемом врачей более чем по 20 направлениям медицины, а также широким спектром диагностических услуг.<br>
-
-          <br>Становясь пациентом наших клиник, Вы выбираете: лучших специалистов, доступные медицинские услуги, передовые технологии, спокойную дружелюбную атмосферу и экономию своего времени. У нас Вы всегда можете рассчитывать на внимательное отношение со стороны докторов и их высокий профессионализм.</p>
+        <div class = "col-8" align="justify ">
+          <h2 align="center"><b>Справочник пациента</b></h2>
+          <p>В данном разделе приведены ответы на часто задаваемые вопросы посетителей сайта.</p>
         </div>
       </div>
     </div>
 
-     <!-- Button trigger modal
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
-      Запустить модальное окно
-    </button>-->
+    <div class = "col-md-8 offset-md-2 col-sm-12" align="justify">
+      <a class = "heading"><h4>&#x2714 К какому специалисту лучше записаться?</h4></a>
+      <div class = "crawl">
+        <div class = "row row-crawl">
+          <div class = "col-md-12 col-sm-12 info-crawl">
+            <p>Подсказать, к какому специалисту вам стоит обратиться в том или ином случае, вам могут администраторы нашей клиники по телефону: 8 (495) 191-29-60</p>
+          </div>
+        </div>
+      </div>
+
+      <a class = "heading"><h4>&#x2714 Какие документы необходимо иметь при посещении клиники?</h4></a>
+      <div class = "crawl">
+        <div class = "row row-crawl">
+          <div class = "col-md-12 col-sm-12 info-crawl">
+            <p>Взрослым пациентам достаточно паспорта, для детей необходимо свидетельство о рождении и паспорт одного из родителей. Идеально – если у вас будет медицинская карта или выписки от врачей, где вы наблюдались раньше.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class = "heading"><h4>&#x2714 Может ли бабушка привести внука на прием к врачу с моего письменного согласия?</h4></a>
+      <div class = "crawl">
+        <div class = "row row-crawl">
+          <div class = "col-md-12 col-sm-12 info-crawl">
+            <p>Прием детей до 15 лет в нашей клинике осуществляется только в присутствии законных представителей ребенка (родителей, опекунов, попечителей). Основание: ФЗ РФ №323 от 21.11.2011 г., ст. 20 часть 2.</p>
+
+            <p>Если Вашего ребенка повторно приведут на прием в клинику родственники, не являющиеся законными представителями (бабушка, дедушка, тетя, дядя и т.д.), то предварительно на сопровождающего необходимо оформить доверенность от имени одного из родителей. Без такой доверенности оказание медицинских услуг ребенку невозможно.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class = "heading"><h4>&#x2714 Есть ли в центре система скидок?</h4></a>
+      <div class = "crawl">
+        <div class = "row row-crawl">
+          <div class = "col-md-12 col-sm-12 info-crawl">
+            <p>В нашей клинике действуют скидки для всех держателей карт "Семья в плюсе" и всех многодетных семей. Со всеми прдоставляемыми скидками вы можете ознакомиться в разделе "акции".</p>
+          </div>
+        </div>
+      </div>
+
+      <a class = "heading"><h4>&#x2714 Можно ли у вас получить больничный и пройти медосмотр?</h4></a>
+      <div class = "crawl">
+        <div class = "row row-crawl">
+          <div class = "col-md-12 col-sm-12 info-crawl">
+            <p>Да, вы можете пройти у нас медосмотр.</p>
+
+            <p>В нашей клинике вы можете получить листок нетрудоспособности. Если во время осмотра врач решит, что вам не стоит ходить на работу, то откроет больничный лист.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class = "heading"><h4>&#x2714 Можно ли вызвать врача на дом?</h4></a>
+      <div class = "crawl">
+        <div class = "row row-crawl">
+          <div class = "col-md-12 col-sm-12 info-crawl">
+            <p>Да, в нашем центре есть возможность вызова врача на дом. Подробности уточняйте по телефону 8 (495) 191-29-60</p>
+          </div>
+        </div>
+      </div>
+
+      <a class = "heading"><h4>&#x2714 Выполняются ли хирургические операции на базе вашей клиники?</h4></a>
+      <div class = "crawl">
+        <div class = "row row-crawl">
+          <div class = "col-md-12 col-sm-12 info-crawl">
+            <p>На базе нашей клиники выполняются малые хирургические операции. Подробнее о них можно прочитать в разделе «Услуги». У нас есть все необходимое и современное оборудование и инструментарий для осуществления оперативных вмешательств на самом высоком уровне.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "container-fluid">
+      <div class = "row justify-content-center">
+        <div class = "col-md-4 col-sm-12">
+          <a href = "to_patients.html"><img class = "picture-link" src = "media/work.jpg" width="100%">
+          <h2><p class = "text-picture-link">Вопросы и ответы</p></h2></a>
+        </div>
+        <div class = "col-md-4 col-sm-12">
+          <a href = "directory.html"><img class = "picture-link" src = "media/work.jpg" width="100%">
+          <h2><p class = "text-picture-link">Справочник пациента</p></h2></a>
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter2Title" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
