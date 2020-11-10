@@ -6,12 +6,12 @@
 
 <body>
 	<?PHP 
-	$host_name="localhost";
-	$user = "id13589731_centermed";
-	$password = "e#EHG(YqO(X)Uy8jTSYy";
+	$host_name="sql108.qlihost.ru";
+	$user = "qlih_25866655";
+	$password = "W4sChjNvUVWiAdm";
 	
 	
-	$query= "GRANT ALL PRIVILEGES ON *.* TO 'id13589731_centermed'@'localhost' IDENTIFIED BY 'e#EHG(YqO(X)Uy8jTSYy' WITH GRANT OPTION";
+	$query= "GRANT ALL PRIVILEGES ON *.* TO 'qlih_25866655'@'sql108.qlihost.ru' IDENTIFIED BY 'W4sChjNvUVWiAdm' WITH GRANT OPTION";
 	
 	if(mysqli_query($link,$query))
 	{

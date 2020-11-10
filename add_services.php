@@ -1,9 +1,9 @@
 <?php
-$host_name="localhost";
-$user = "id13589731_centermed";
-$password = "e#EHG(YqO(X)Uy8jTSYy";
+$host_name="sql108.qlihost.ru";
+$user = "qlih_25866655";
+$password = "W4sChjNvUVWiAdm";
 
-$mysqli = new mysqli($host_name, $user, $password, "id13589731_basepd");
+$mysqli = new mysqli($host_name, $user, $password, "qlih_25866655_id13589731_basepd");
 if ($mysqli->connect_errno) {
     echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }

@@ -1,11 +1,14 @@
 <?PHP 
-	$host_name="localhost";
-	$user = "id13589731_centermed";
-	$password = "e#EHG(Yq1(X)Uy8jTSYy";
 	
+	
+	$hostname="sql108.qlihost.ru";
+	$login = "qlih_25866655";
+	$password = "W4sChjNvUVWiAdm";
+	$basename = "qlih_25866655_id13589731_basepd";
+
 	$link = mysqli_connect($host_name,$user, $password);
 
-	mysqli_select_db($link,"id13589731_basepd");
+	mysqli_select_db($link,"qlih_25866655_id13589731_basepd");
 
 	
     $res = $_POST['submit'];

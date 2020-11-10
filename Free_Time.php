@@ -1,7 +1,8 @@
 <?PHP 
-$hostname = "localhost";
-$login = "id13589731_centermed";
-$password = "e#EHG(YqO(X)Uy8jTSYy";
+$hostname="sql108.qlihost.ru";
+$login = "qlih_25866655";
+$password = "W4sChjNvUVWiAdm";
+$dbname = "qlih_25866655_id13589731_basepd";
 $link = mysqli_connect($hostname,$login, $password);
 if($link)
 {
@@ -13,7 +14,7 @@ else
 	echo "Пользователь $login не подключен!";?> <br><?PHP
 }
 
-$dbname = "id13589731_basepd";
+
 if(mysqli_select_db($link,$dbname))
 {
 	echo "База $dbname подключена";?> <br><?PHP

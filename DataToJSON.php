@@ -1,10 +1,12 @@
 <?PHP
+$hostname="sql108.qlihost.ru";
+$login = "qlih_25866655";
+$password = "W4sChjNvUVWiAdm";
+$basename = "qlih_25866655_id13589731_basepd";
 
-$hostname = "localhost";
-$login = "id13589731_centermed";
-$password = "e#EHG(YqO(X)Uy8jTSYy";
+
 $link = mysqli_connect($hostname,$login,$password);
-$basename = "id13589731_basepd";
+
 $select = mysqli_select_db($link,$basename);
 
 $query = "SELECT COUNT(*) FROM vrachi";

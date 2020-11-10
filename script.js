@@ -9,10 +9,8 @@ var i=1,count=0,d=0,k=0,date=0 ;
     if(i==2) var s="media/slide"+i+".png";
     else var s="media/slide"+i+".jpg";
     document.getElementById("slide_id").src=s;
+    timerId = setInterval(setimg, 10000,1);
   }
-  function AutoSlider(){
-  timerId = setInterval(setimg, 10000,1);
-}
  function img_enter(){
  	 document.getElementById("logomed").src='media/cm3.svg';
  }
@@ -31,13 +29,9 @@ var i=1,count=0,d=0,k=0,date=0 ;
  function changeDate(){
   selected=document.getElementById("date_priem").selectedIndex;
   document.getElementById("date_priem").value=Number(date+selected)+".05.20";
-<<<<<<< HEAD
   document.getElementById("date_priem").selectedIndex=selected;
  
  }
-=======
-  document.getElementById("date_priem").selectedIndex=selected; }
->>>>>>> ffd24839fc2d13a190438112f460af54f585446f
  function changeTime(){
   selected=document.getElementById("time_priema").selectedIndex;
   valueoftime=document.getElementById("time_priema").options[selected].value;
@@ -62,11 +56,7 @@ var i=1,count=0,d=0,k=0,date=0 ;
     if(hours>20) now_date++;
     count_date=0;
     for (var i=now_date;i<=31;i++) {
-<<<<<<< HEAD
       document.getElementById("date_priem").options[count_date]=new Option(i+".05.20",i+".05.20");
-=======
-      document.getElementById("date_priem").options[count_date]=new Option(i+".05.20",i+".05.200");
->>>>>>> ffd24839fc2d13a190438112f460af54f585446f
       if(date==i) {document.getElementById("date_priem").options[count_date].selected="selected";}
       count_date++;
     }
